@@ -1,4 +1,4 @@
-import styles from './IndexPage.module.css'
+import BestSellersList from '../best-sellers-list/BestSellersList';
 
 
 export default function IndexPage() {
@@ -58,57 +58,7 @@ export default function IndexPage() {
                     </div>
                 </div>
             </section>
-
-            <div className="wrapper">
-                <h1>Top 10  Best-Selling Books of All Time</h1>
-                <cite>Source: <a href="https://www.theguardian.com/music/2021/nov/30/the-50-best-albums-of-2021">The Guardian</a></cite>
-                <ol reversed start="10">
-                    <li>
-                        <span>Mdou Moctar</span>
-                        <span>Afrique Victime</span>
-                    </li>
-                    <li>
-                        <img src="https://assets.codepen.io/85648/arlo-parks.jpg" alt="Arlo Parks album cover" />
-                        <span>Arlo Parks</span>
-                        <span>Collapsed in Sunbeams</span>
-                    </li>
-                    <li>
-                        <span>Olivia Rodrigo</span>
-                        <span>Sour</span>
-                    </li>
-                    <li>
-                        <span>Dry Cleaning</span>
-                        <span>New Long Leg</span>
-                    </li>
-                    <li>
-                        <span>Sault</span>
-                        <span>Nine</span>
-                    </li>
-                    <li>
-                        <span>Tyler, the Creator</span>
-                        <span>Call Me If You Get Lost</span>
-                    </li>
-                    <li>
-                        <img src="https://assets.codepen.io/85648/weather-station.webp" alt="the weather station album cover" />
-                        <span>The Weather Station</span>
-                        <span>Ignorance</span>
-                    </li>
-                    <li>
-                        <span>Little Simz</span>
-                        <span>Sometimes I Might Be Introvert</span>
-                    </li>
-                    <li>
-                        <img src="https://assets.codepen.io/85648/wolf-alice.webp" alt="Wolf Alic album cover" />
-                        <span>Wolf Alice</span>
-                        <span>Blue Weekend</span>
-                    </li>
-                    <li>
-                        <img src="https://assets.codepen.io/85648/self-esteem.jpg" alt="Self Esteem album cover" />
-                        <span>Self Esteem</span>
-                        <span>Prioritise Pleasure</span>
-                    </li>
-                </ol>
-            </div>
+            <BestSellersList />
         </div>
     );
 }

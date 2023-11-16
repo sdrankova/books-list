@@ -277,6 +277,10 @@ a:focus {
   outline: none;
 }
 
+.best-books-wrapper {
+  margin-top: 5em;
+}
+
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
   background-image: url(../images/menu.png);
   background-size: 55px;
@@ -334,12 +338,17 @@ a:focus {
   position: relative;
 }
 
-.slider_section .detail-box h1 {
+.slider_section .detail-box h1, .best-books-wrapper h1 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3.5rem;
   font-family: 'American Typewriter', sans-serif;
   font-weight: 400;
+}
+
+.best-books-wrapper h1 {
+  text-align: center;
+  font-size: 2em;
 }
 
 .slider_section .detail-box .btn-box {

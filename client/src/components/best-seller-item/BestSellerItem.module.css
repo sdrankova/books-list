@@ -1,0 +1,29 @@
+.book {
+    background: #fff;
+    border-radius: 0.3em;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 1em 0.2em rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 15em;
+    margin: auto 5em 4em 5em;
+}
+
+.book img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+.book section,
+.book footer {
+    padding: 1em 1.2em;
+}
+
+.book section {
+    flex: 1 0 auto;
+}
+
+.book footer {
+    border-top: 2px solid #CCC;
+}
