@@ -12,7 +12,7 @@ export default function BestSellerItem({
         image,)
     return (
         <div className={styles.book}>
-            <i class="fa-regular fa-star"></i>
+            {/* <i class="fa-regular fa-star"></i> */}
             <img src={image} />
             <section>
                 <h3>{title}</h3>

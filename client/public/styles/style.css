@@ -1,3 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+}
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60em;
+  margin: 0 auto;
+  gap: 4em;
+}
+
 @font-face {
   font-family: American Typewriter;
   src: url(../fonts/AmericanTypewriterBQ-Bold.otf);
@@ -5,12 +25,6 @@
 
 p {
   color: #272727;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #0c0c0c;
-  background-color: #ffffff;
 }
 
 .layout_margin {
@@ -83,17 +97,17 @@ body {
 
 }
 
-.hero_area::before {
+/* .hero_area::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 18%;
+  top: -7.8em;
+  left: 1em;
+  width: 20%;
   min-width: 150px;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#51b5ef), to(#436bf1));
   background: linear-gradient(to right, #51b5ef, #436bf1);
-}
+} */
 
 .sub_page .hero_area {
   height: auto;
@@ -201,12 +215,66 @@ body {
   text-transform: uppercase;
 }
 
-.overlay-content {
+/* .navigation-items {
+  background-color: #436bf1;
   position: relative;
   top: 25%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: -1em;
+  padding: 1em;
+} */
+
+
+/* .navigation-link {
+  border-bottom-color: #48d9f3;
+  color: #e0eff1;
+  cursor: pointer;
+}
+
+.navigation-link:hover,
+.navigation-link.active {
+  background-color: #48d9f3;
+  color: #273133;
+} */
+
+
+.navigation-items {
+  width: 48em;
+  height: 60px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+  margin: auto 2.1em;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #436bf1;
+}
+
+/* #51b5ef, #436bf1 */
+
+.navigation-items a:hover,
+a.active {
+  background: #51b5ef;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+}
+
+.navigation-items {
+  flex: 1;
+  padding-left: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-items a {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.navigation-items a {
+  text-decoration: none;
+  color: rgb(5, 51, 92);
 }
 
 .menu_width {
@@ -269,8 +337,9 @@ a:focus {
 }
 
 .custom_nav-container {
+  background-color: #436bf1;
   z-index: 99999;
-  padding: 15px 0;
+  padding: 0;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -279,6 +348,12 @@ a:focus {
 
 .best-books-wrapper {
   margin-top: 5em;
+  
+}
+
+.source-text {
+  text-align: center;
+  font-style: italic;
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {

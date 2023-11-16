@@ -1,20 +1,10 @@
+import { useState } from "react";
+
 import { Link } from 'react-router-dom';
 
 
 export default function Navigation() {
-    function openNav() {
-        document.getElementById("myNav").classList.toggle("menu_width");
-        document
-            .querySelector(".custom_menu-btn")
-            .classList.toggle("menu_btn-style");
-    }
-
-    function closeNav() {
-        document.getElementById("myNav").classList.toggle("menu_width");
-        document
-            .querySelector(".custom_menu-btn")
-            .classList.remove("menu_btn-style");
-    }
+    const [active, setActive] = useState(0);
 
     return (
         <div className="hero_area hero_area_navigation">
@@ -27,23 +17,25 @@ export default function Navigation() {
                                 GoodBooks
                             </span>
                         </Link>
-
-                        <div className="navbar-collapse" id="">
-                            <div className="custom_menu-btn">
-                                <button onClick={openNav}>
-                                    <span className="s-1"> </span>
-                                    <span className="s-2"> </span>
-                                    <span className="s-3"> </span>
-                                </button>
-                            </div>
-                            <div id="myNav" className="overlay">
-                                <div className="overlay-content">
-                                    <Link to="/" onClick={closeNav}>HOME</Link>
-                                    <Link to="food.html">YOUR BOOKS</Link>
-                                    <Link to="food.html">OTHER'S BOOKS</Link>
-                                    <Link to="/create-book" onClick={closeNav}>ADD BOOK</Link>
-                                </div>
-                            </div>
+                        <div className="navigation-items">
+                            <Link
+                                to="/"
+                                onClick={() => setActive(0)}
+                            >
+                                HOME
+                            </Link>
+                            <Link
+                                className={active === 1 ? "active" : ""}
+                                onClick={() => setActive(1)}
+                                to="food.html">YOUR BOOKS</Link>
+                            <Link
+                                className={active === 2 ? "active" : ""}
+                                onClick={() => setActive(2)}
+                                to="food.html">OTHER'S BOOKS</Link>
+                            <Link
+                                className={active === 3 ? "active" : ""}
+                                onClick={() => setActive(3)}
+                                to="/create-book">ADD BOOK</Link>
                         </div>
                     </nav>
                 </div>
