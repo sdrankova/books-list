@@ -27,6 +27,10 @@ p {
   color: #272727;
 }
 
+.form_section {
+  margin: auto;
+}
+
 .layout_margin {
   margin: 90px 0;
 }
@@ -874,17 +878,19 @@ a:focus {
   background-color: #252525;
 }
 
-.contact_section h2 {
+.form_section h2 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 45px;
 }
 
-.contact_section .form_container {
+.form_section .form_container {
   padding: 0 45px;
+  position: relative;
+  left: 13em;
 }
 
-.contact_section .form_container input {
+.form_section .form_container input {
   width: 100%;
   height: 30px;
   margin-top: 10px;
@@ -893,27 +899,27 @@ a:focus {
   outline: none;
 }
 
-.contact_section .form_container input.message_input {
+.form_section .form_container input.message_input {
   margin-top: 45px;
 }
 
-.contact_section .form_container input::-webkit-input-placeholder {
+.form_section .form_container input::-webkit-input-placeholder {
   color: rgba(35, 9, 9, 0.6);
 }
 
-.contact_section .form_container input:-ms-input-placeholder {
+.form_section .form_container input:-ms-input-placeholder {
   color: rgba(35, 9, 9, 0.6);
 }
 
-.contact_section .form_container input::-ms-input-placeholder {
+.form_section .form_container input::-ms-input-placeholder {
   color: rgba(35, 9, 9, 0.6);
 }
 
-.contact_section .form_container input::placeholder {
+.form_section .form_container input::placeholder {
   color: rgba(35, 9, 9, 0.6);
 }
 
-.contact_section .form_container button {
+.form_section .form_container button {
   background-color: transparent;
   border: 2px solid #51b5ef;
   color: #51b5ef;
@@ -923,11 +929,11 @@ a:focus {
   margin-top: 45px;
 }
 
-.contact_section .contact_box {
+.form_section .contact_box {
   margin-top: 35px;
 }
 
-.contact_section .contact_box a {
+.form_section .contact_box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -938,7 +944,7 @@ a:focus {
   margin: 15px 0;
 }
 
-.contact_section .contact_box a .img-box {
+.form_section .contact_box a .img-box {
   width: 45px;
   height: 45px;
   padding: 10px;
@@ -955,7 +961,7 @@ a:focus {
   margin-right: 15px;
 }
 
-.contact_section .contact_box a .img-box img {
+.form_section .contact_box a .img-box img {
   width: 100%;
 }
 

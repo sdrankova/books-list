@@ -99,19 +99,19 @@
         margin-top: 15px;
     }
 
-    .contact_section .form_container {
+    .form_section .form_container {
         text-align: center;
         padding: 0;
     }
 
-    .contact_section .contact_box {
+    .form_section .contact_box {
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
 
-    .contact_section .contact_box a {
+    .form_section .contact_box a {
         width: 235px;
     }
 
