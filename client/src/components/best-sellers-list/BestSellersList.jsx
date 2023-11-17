@@ -14,7 +14,7 @@ export default function BestSellersList() {
     }, []);
     return (
         <div className="best-books-wrapper">
-            <h1>Top 5 Print & E-Book Fiction</h1>
+            <h1>Top 10 Print & E-Book Fiction</h1>
             <p className="source-text">Source: <a href="https://www.nytimes.com/books/best-sellers/">The New York Times</a></p>
             <div>
                 {BestSellersList.map(book => (

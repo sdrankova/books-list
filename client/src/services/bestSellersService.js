@@ -6,7 +6,7 @@ export const getBestSellers = async() => {
     const response = await fetch(nytApiUrl);
     const result = await response.json();
 
-    const data = result.results.books.slice(0, 5);
+    const data = result.results.books.slice(0, 10);
 
     return data;
   }
