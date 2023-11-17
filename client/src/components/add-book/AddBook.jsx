@@ -13,6 +13,7 @@ export default function AddBook({
         'imageUrl': '',
         'rating': '',
         'opinion': '',
+        'summary': '',
     }
 
     const titleInputRef = useRef();
@@ -70,7 +71,6 @@ export default function AddBook({
                                     name="title"
                                     value={formValues.title}
                                     onChange={changeHandler}
-                                    placeholder="Book title"
                                 />
 
                                 <label htmlFor="author">Author:</label>
@@ -80,7 +80,6 @@ export default function AddBook({
                                     name="author"
                                     value={formValues.author}
                                     onChange={changeHandler}
-                                    placeholder="Author"
                                 />
 
                                 <label htmlFor="genre">Genre:</label>
@@ -90,7 +89,6 @@ export default function AddBook({
                                     name="genre"
                                     value={formValues.genre}
                                     onChange={changeHandler}
-                                    placeholder="Genre"
                                 />
 
                                 <label htmlFor="imageUrl">Image URL:</label>
@@ -100,7 +98,6 @@ export default function AddBook({
                                     name="imageUrl"
                                     value={formValues.imageUrl}
                                     onChange={changeHandler}
-                                    placeholder="Upload an image URL"
                                 />
 
                                 <label htmlFor="rating">Rating:</label>
@@ -128,7 +125,19 @@ export default function AddBook({
                                     name="opinion"
                                     value={formValues.opinion}
                                     onChange={changeHandler}
-                                    placeholder="Your opinion"></textarea>
+                                ></textarea>
+
+                                <label htmlFor="opinion">Short Summary:</label>
+                                <textarea
+                                    className="summary"
+                                    rows="4"
+                                    type="text"
+                                    id="summary"
+                                    name="summary"
+                                    value={formValues.summary}
+                                    onChange={changeHandler}
+                                ></textarea>
+
 
                                 <button type="submit">Submit</button>
                             </form>
