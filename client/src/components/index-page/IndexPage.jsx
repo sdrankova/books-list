@@ -21,7 +21,7 @@ export default function IndexPage() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-4 col-md-4 offset-md-1">
-                            <div id="carouselExampleIndicators" className="carousel slide " data-ride="carousel">
+                            <div id="carouselExampleIndicators">
 
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">

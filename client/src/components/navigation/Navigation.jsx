@@ -10,7 +10,7 @@ export default function Navigation() {
         <div className="hero_area hero_area_navigation">
             <header className="header_section">
                 <div className="container-fluid">
-                    <nav className="navbar navbar-expand-lg custom_nav-container">
+                    <nav className="navbar custom_nav-container">
                         <Link to="/" className="navbar-brand">
                             <img src="images/logo.png" alt="" />
                             <span>

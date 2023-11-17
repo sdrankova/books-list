@@ -52,7 +52,7 @@ export default function AddBook({
     return (
 
 
-        <section className="form_section layout_padding-bottom ">
+        <section className="form_section ">
             <div className="container">
                 <h2>
                     Add New Book
