@@ -12,6 +12,7 @@ import ListBooks from './components/list-books/ListBooks';
 import Register from './components/register/Register';
 import Path from './paths';
 import Login from './components/login/Login';
+import Logout from './components/logout/Logout';
 
 function App() {
     const formRef = useRef();
@@ -45,10 +46,16 @@ function App() {
         }
     };
 
+    const logoutHandler = () => {
+        setAuth({});
+        localStorage.removeItem('accessToken');
+    };
+
     const values = {
         registerSubmitHandler,
         loginSubmitHandler,
         loginError,
+        logoutHandler,
         isAuthenticated: !!auth.accessToken,
     }
 
@@ -62,6 +69,7 @@ function App() {
                     <Route path='/list-books' element={<ListBooks />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/logout' element={<Logout />} />
                 </Routes>
             </AuthContext.Provider>
         </>

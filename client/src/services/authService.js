@@ -27,3 +27,8 @@ export const login = async (email, password) => {
 
     return await response.json();
 };
+
+export const logout = () => {
+    const response = fetch(`${baseUrl}/logout`);
+    return response;
+}

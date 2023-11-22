@@ -44,6 +44,10 @@ export default function Navigation() {
                                         className={active === 3 ? "active" : ""}
                                         onClick={() => setActive(3)}
                                         to="/create-book">ADD BOOK</Link>
+                                    <Link
+                                        className={active === 4 ? "active" : ""}
+                                        onClick={() => setActive(3)}
+                                        to="/logout">LOGOUT</Link>
                                 </div>
                             )}
                             {!isAuthenticated && (
