@@ -11,6 +11,7 @@ import AddBook from './components/add-book/AddBook';
 import ListBooks from './components/list-books/ListBooks';
 import Register from './components/register/Register';
 import Path from './paths';
+import Login from './components/login/Login';
 
 function App() {
     const formRef = useRef();
@@ -24,15 +25,24 @@ function App() {
 
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.firstName, values.lastName, values.username, values.email, values.password)
+
+        localStorage.setItem('accessToken', result.accessToken);
+
+        navigate(Path.Home);
+    };
+
+    const loginSubmitHandler = async values => {
+        const result = await authService.login(values.email, values.password);
         setAuth(result);
 
         localStorage.setItem('accessToken', result.accessToken);
 
         navigate(Path.Home);
-    }
+    };
 
     const values = {
         registerSubmitHandler,
+        loginSubmitHandler,
         isAuthenticated: !!auth.accessToken,
     }
 
@@ -45,6 +55,7 @@ function App() {
                     <Route path='/create-book' element={<AddBook formRef={formRef} />} />
                     <Route path='/list-books' element={<ListBooks />} />
                     <Route path='/register' element={<Register />} />
+                    <Route path='/login' element={<Login />} />
                 </Routes>
             </AuthContext.Provider>
         </>

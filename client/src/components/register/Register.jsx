@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import styles from './Register.module.css';
 import AuthContext from '../../contexts/AuthContext';
 import useForm from '../../hooks/UseForm';
 
@@ -25,7 +24,7 @@ export default function Register() {
     })
 
     return (
-        <div className={styles.form_container}>
+        <div className="form_container">
             <form onSubmit={onSubmit}>
                 <input
                     type="text"

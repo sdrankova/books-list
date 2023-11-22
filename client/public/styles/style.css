@@ -346,6 +346,46 @@ a:focus {
   margin-top: 45px;
 }
 
+.form_container {
+  padding: 0 45px;
+  margin: auto;
+}
+
+.form_container input {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #363535;
+  outline: none;
+}
+
+.form_container input::-webkit-input-placeholder {
+  color: rgba(35, 9, 9, 0.6);
+}
+
+.form_container input:-ms-input-placeholder {
+  color: rgba(35, 9, 9, 0.6);
+}
+
+.form_container input::-ms-input-placeholder {
+  color: rgba(35, 9, 9, 0.6);
+}
+
+.form_container input::placeholder {
+  color: rgba(35, 9, 9, 0.6);
+}
+
+.form_container button {
+  background-color: transparent;
+  border: 2px solid #51b5ef;
+  color: #51b5ef;
+  text-transform: uppercase;
+  padding: 6px 40px;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+
 /* footer section*/
 .footer_section {
   padding: 20px;

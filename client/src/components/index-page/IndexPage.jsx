@@ -46,9 +46,12 @@ export default function IndexPage() {
                                 </p>
 
                                 <div className="btn-box">
-                                    <a href="" className="btn-1">
+                                    <Link
+                                        to='/login'
+                                        className="btn-1"
+                                    >
                                         Log In
-                                    </a>
+                                    </Link>
                                     <Link
                                         to='/register'
                                         className="btn-2"
