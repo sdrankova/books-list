@@ -6,10 +6,6 @@ export default function BestSellerItem({
     description,
     image,
 }) {
-    console.log(title,
-        author,
-        description,
-        image,)
     return (
         <div className={styles.book}>
             {/* <i class="fa-regular fa-star"></i> */}

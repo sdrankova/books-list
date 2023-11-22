@@ -12,7 +12,7 @@ const RegisterFormKeys = {
 }
 
 export default function Register() {
-    const { registerSubmitHandler } = useContext(AuthContext);
+    const { registerSubmitHandler, registerError } = useContext(AuthContext);
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [confirmPasswordError, setconfirmPasswordError] = useState('');
@@ -50,6 +50,9 @@ export default function Register() {
 
     return (
         <div className="form_container">
+            {registerError && (
+                <p className="errorText">Registration failed: {registerError}</p>
+            )}
             <form onSubmit={onSubmit}>
 
                 <label htmlFor="firstName">First name:</label>

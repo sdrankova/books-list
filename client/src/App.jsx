@@ -18,6 +18,7 @@ function App() {
     const formRef = useRef();
     const navigate = useNavigate();
     const [loginError, setLoginError] = useState('');
+    const [registerError, setRegisterError] = useState('');
 
     const [auth, setAuth] = useState(() => {
         localStorage.removeItem('accessToken');
@@ -28,9 +29,14 @@ function App() {
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.firstName, values.lastName, values.username, values.email, values.password)
 
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
+        if (!result.message) {
+            setAuth(result);
+            localStorage.setItem('accessToken', result.accessToken);
+            navigate(Path.Home);
+            setRegisterError('');
+        } else {
+            setRegisterError(result.message);
+        }
     };
 
 
@@ -53,6 +59,7 @@ function App() {
 
     const values = {
         registerSubmitHandler,
+        registerError,
         loginSubmitHandler,
         loginError,
         logoutHandler,
