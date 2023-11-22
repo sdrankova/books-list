@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BestSellersList from '../best-sellers-list/BestSellersList';
 
 
@@ -48,9 +49,12 @@ export default function IndexPage() {
                                     <a href="" className="btn-1">
                                         Log In
                                     </a>
-                                    <a href="" className="btn-2">
+                                    <Link
+                                        to='/register'
+                                        className="btn-2"
+                                    >
                                         Register
-                                    </a>
+                                    </Link>
                                 </div>
 
                             </div>
