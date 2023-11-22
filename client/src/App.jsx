@@ -2,7 +2,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import { useRef, useState } from 'react'
 
-import * as authService from './services/AuthService';
+import * as authService from './services/authService';
 import AuthContext from './contexts/AuthContext';
 
 import Navigation from "./components/navigation/Navigation"
@@ -16,6 +16,7 @@ import Login from './components/login/Login';
 function App() {
     const formRef = useRef();
     const navigate = useNavigate();
+    const [loginError, setLoginError] = useState('');
 
     const [auth, setAuth] = useState(() => {
         localStorage.removeItem('accessToken');
@@ -31,18 +32,23 @@ function App() {
         navigate(Path.Home);
     };
 
+
     const loginSubmitHandler = async values => {
         const result = await authService.login(values.email, values.password);
-        setAuth(result);
-
-        localStorage.setItem('accessToken', result.accessToken);
-
-        navigate(Path.Home);
+        if (!result.message) {
+            setAuth(result);
+            localStorage.setItem('accessToken', result.accessToken);
+            navigate(Path.Home);
+            setLoginError('');
+        } else {
+            setLoginError(result.message);
+        }
     };
 
     const values = {
         registerSubmitHandler,
         loginSubmitHandler,
+        loginError,
         isAuthenticated: !!auth.accessToken,
     }
 

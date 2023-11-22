@@ -386,6 +386,11 @@ a:focus {
   margin-top: 45px;
 }
 
+.errorText {
+  font-size: 0.7em;
+  color: red;
+}
+
 /* footer section*/
 .footer_section {
   padding: 20px;

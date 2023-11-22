@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 import BestSellersList from '../best-sellers-list/BestSellersList';
+import AuthContext from '../../contexts/AuthContext';
+import { useContext } from 'react';
 
 
 export default function IndexPage() {
+    const {
+        isAuthenticated,
+    } = useContext(AuthContext);
+
     return (
         <div className="hero_area">
             <section className=" slider_section position-relative">
@@ -45,20 +51,22 @@ export default function IndexPage() {
                                     alteration in some form, by injected humour, or randomised words
                                 </p>
 
-                                <div className="btn-box">
-                                    <Link
-                                        to='/login'
-                                        className="btn-1"
-                                    >
-                                        Log In
-                                    </Link>
-                                    <Link
-                                        to='/register'
-                                        className="btn-2"
-                                    >
-                                        Register
-                                    </Link>
-                                </div>
+                                {!isAuthenticated && (
+                                    <div className="btn-box">
+                                        <Link
+                                            to='/login'
+                                            className="btn-1"
+                                        >
+                                            Log In
+                                        </Link>
+                                        <Link
+                                            to='/register'
+                                            className="btn-2"
+                                        >
+                                            Register
+                                        </Link>
+                                    </div>
+                                )}
 
                             </div>
                         </div>
