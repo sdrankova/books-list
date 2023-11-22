@@ -57,6 +57,7 @@ function App() {
         loginError,
         logoutHandler,
         isAuthenticated: !!auth.accessToken,
+        username: auth.username,
     }
 
     return (

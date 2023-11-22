@@ -16,19 +16,17 @@ export default function Navigation() {
             <header className="header_section">
                 <div className="container-fluid">
                     <nav className="navbar custom_nav-container">
-                        <Link to="/" className="navbar-brand">
+                        <Link
+                            to="/"
+                            className="navbar-brand"
+                            onClick={() => setActive(0)}
+                        >
                             <img src="images/logo.png" alt="" />
                             <span>
                                 GoodBooks
                             </span>
                         </Link>
                         <div className="navigation-items">
-                            <Link
-                                to="/"
-                                onClick={() => setActive(0)}
-                            >
-                                HOME
-                            </Link>
                             {isAuthenticated && (
                                 <div id="user">
 

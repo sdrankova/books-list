@@ -7,6 +7,7 @@ import { useContext } from 'react';
 export default function IndexPage() {
     const {
         isAuthenticated,
+        username,
     } = useContext(AuthContext);
 
     return (
@@ -27,7 +28,7 @@ export default function IndexPage() {
                 </div>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-4 col-md-4 offset-md-1">
+                        <div className="col-lg-4 col-md-4">
                             <div id="carouselExampleIndicators">
 
                                 <div className="carousel-inner">
@@ -41,17 +42,17 @@ export default function IndexPage() {
 
                             </div>
                         </div>
-                        <div className=" col-md-5 offset-md-1">
-                            <div className="detail-box">
-                                <h1>
-                                    Good Books
-                                </h1>
-                                <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                    alteration in some form, by injected humour, or randomised words
-                                </p>
+                        {!isAuthenticated && (
+                            <div className=" col-md-5 offset-md-1">
+                                <div className="detail-box">
+                                    <h1>
+                                        Good Books
+                                    </h1>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                                        alteration in some form, by injected humour, or randomised words
+                                    </p>
 
-                                {!isAuthenticated && (
                                     <div className="btn-box">
                                         <Link
                                             to='/login'
@@ -66,10 +67,21 @@ export default function IndexPage() {
                                             Register
                                         </Link>
                                     </div>
-                                )}
-
+                                </div>
                             </div>
-                        </div>
+                        )}
+
+                        {isAuthenticated && (
+                            <div className=" col-md-5 offset-md-1">
+                                <div className="detail-box">
+                                    <h1>
+                                        Hello, {username}
+                                    </h1>
+                                        <Link to="/list-books">YOUR BOOKS</Link>
+                                </div>
+                            </div>
+                        )}
+
                     </div>
                 </div>
             </section>

@@ -11,10 +11,7 @@ body {
 }
 
 #root {
-  display: flex;
   flex-wrap: wrap;
-  max-width: 60em;
-  margin: 0 auto;
   gap: 4em;
 }
 
@@ -25,7 +22,7 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -47,8 +44,7 @@ body {
 } */
 
 .header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 0;
 }
 
 .header_section {
@@ -157,7 +153,7 @@ a:focus {
 }
 
 .best-books-wrapper {
-  margin-top: 5em;
+  margin-top: 1em;
   
 }
 
@@ -176,7 +172,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   height: calc(100% - 80px);
-  padding: 45px 0 90px 0;
+  padding: 0;
 }
 
 .slider_section .side_heading {
@@ -309,6 +305,14 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.best-sellers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+margin
 
 .form_section {
   padding-bottom: 90px;
