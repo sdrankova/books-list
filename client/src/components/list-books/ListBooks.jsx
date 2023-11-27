@@ -10,6 +10,7 @@ export default function ListBooks() {
         getAll()
             .then(result => setBooks(result));
     }, []);
+    console.log(books)
 
     return (
         <div className="books-list">
@@ -17,7 +18,7 @@ export default function ListBooks() {
 
             
         {books.map(book => (
-            <ListBookItem key={book._id} title={book.title} author={book.author} summary={book.summary} imageUrl={book.imageUrl} />
+            <ListBookItem key={book._id} _id={book._id} title={book.title} author={book.author} summary={book.summary} imageUrl={book.imageUrl} />
         ))}
         </div>
     );

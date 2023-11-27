@@ -3,7 +3,6 @@ import { create } from "../../services/bookService";
 import styles from './AddBook.module.css'
 
 export default function AddBook({
-    formRef
 }) {
 
     const formInitialState = {
@@ -61,7 +60,7 @@ export default function AddBook({
                     <div className="col-md-7">
                         <div className="form_container">
 
-                            <form ref={formRef} onSubmit={submitHandler} className="create" >
+                            <form onSubmit={submitHandler} className="create" >
 
                                 <label htmlFor="title">Book Title:</label>
                                 <input

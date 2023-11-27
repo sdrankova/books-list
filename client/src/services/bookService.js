@@ -1,25 +1,23 @@
-const baseUrl = 'http://localhost:3030/jsonstore/books';
+import * as request from "../lib/request";
 
-export const getAll = async (bookData) => {
-    const response = await fetch(baseUrl);
-    const result = await response.json();
-    const data = Object.values(result);
+const baseUrl = 'http://localhost:3030/data/books';
 
-    return data;
+export const getAll = async () => {
+    const result = await request.get(baseUrl);
+
+    return result;
+};
+
+export const getOne = async (bookId) => {
+    const result = await request.get(`${baseUrl}/${bookId}`, );
+
+    return result;
 }
 
 
 export const create = async (bookData) => {
 
-    const response = await fetch(baseUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(bookData),
-    });
-
-    const result = await response.json();
+    const result = await request.post(baseUrl, bookData);
 
     return result;
 };
