@@ -18,11 +18,14 @@ export default function BookDetails() {
         <div className="container">
             <div className="row">
                 <img src={book.imageUrl} alt="" />
-                <div className="col-md-6">
-                    <h2>
-                        {book.title}
-                    </h2>
+                <div className="col-md-6 book-details">
+                    <h2>{book.title}</h2>
+                    <p>Genre: {book.genre}</p>
+                    <p>Rate: {book.rating}</p>
+                    <h4>About the book:</h4>
                     <p>{book.summary}</p>
+                    <h4>Your opinion:</h4>
+                    <p>{book.opinion}</p>
                 </div>
             </div>
         </div>

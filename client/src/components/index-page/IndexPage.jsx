@@ -56,13 +56,13 @@ export default function IndexPage() {
                                     <div className="btn-box">
                                         <Link
                                             to='/login'
-                                            className="btn-1"
+                                            className="btn-1 button"
                                         >
                                             Log In
                                         </Link>
                                         <Link
                                             to='/register'
-                                            className="btn-2"
+                                            className="btn-2 button"
                                         >
                                             Register
                                         </Link>
@@ -77,7 +77,7 @@ export default function IndexPage() {
                                     <h1>
                                         Hello, {username}
                                     </h1>
-                                        <Link to="/list-books">YOUR BOOKS</Link>
+                                        <Link to="/list-books" className="button">YOUR BOOKS</Link>
                                 </div>
                             </div>
                         )}
