@@ -37,7 +37,7 @@ export default function Navigation() {
                                     <Link
                                         className={active === 2 ? "active" : ""}
                                         onClick={() => setActive(2)}
-                                        to="food.html">OTHER'S BOOKS</Link>
+                                        to="/others-books">OTHER'S BOOKS</Link>
                                     <Link
                                         className={active === 3 ? "active" : ""}
                                         onClick={() => setActive(3)}

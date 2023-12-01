@@ -6,7 +6,6 @@ import * as bookService from '../../services/bookService';
 export default function BookDetails() {
     const [book, setBook] = useState({});
     const { bookId } = useParams();
-    console.log(bookId)
 
     useEffect(() => {
         bookService.getOne(bookId)

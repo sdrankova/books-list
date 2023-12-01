@@ -8,15 +8,20 @@ export default function ListBookItem({
     author,
     summary,
     imageUrl,
+    createdBy
 }) {
     return (
         <div className={styles.book}>
             <img src={imageUrl} alt="Item Image" />
             <div className={styles.bookInfo}>
-                <h3>{title}</h3>
-                <h5>{author}</h5>
-                <p>{summary}</p>
+                <h3>Title: {title}</h3>
+                <h5>By: {author}</h5>
+                <p>Short summary: {summary}</p>
                 <Link to={`/book-details/${_id}`} className="read-more">Read More</Link>
+
+                {createdBy && (
+                    <p>Created By: {createdBy}</p>
+                )}
             </div>
         </div>
     );

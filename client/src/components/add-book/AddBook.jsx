@@ -1,9 +1,11 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import { create } from "../../services/bookService";
 import styles from './AddBook.module.css'
+import AuthContext from "../../contexts/AuthContext";
 
 export default function AddBook({
 }) {
+    const { username } = useContext(AuthContext);
 
     const formInitialState = {
         'title': '',
@@ -13,6 +15,7 @@ export default function AddBook({
         'rating': '',
         'opinion': '',
         'summary': '',
+        createdBy: username,
     }
 
     const titleInputRef = useRef();

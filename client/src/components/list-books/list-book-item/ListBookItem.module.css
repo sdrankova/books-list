@@ -1,3 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 25%;
+}
+
 .book {
     display: flex;
     max-width: 45em;

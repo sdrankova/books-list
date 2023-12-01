@@ -63,6 +63,7 @@ export const AuthProvider = ({
         loginError,
         logoutHandler,
         isAuthenticated: !!auth.accessToken,
+        userId: auth._id,
         username: auth.username,
     }
     

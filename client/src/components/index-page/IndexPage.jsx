@@ -29,18 +29,9 @@ export default function IndexPage() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-4 col-md-4">
-                            <div id="carouselExampleIndicators">
 
-                                <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <div className="img-box b-1">
-                                            <img src="images/books.png" alt="" />
-                                        </div>
-                                    </div>
+                            <img src="images/undraw_book_lover_mkck.svg" className='header-image' />
 
-                                </div>
-
-                            </div>
                         </div>
                         {!isAuthenticated && (
                             <div className=" col-md-5 offset-md-1">
@@ -77,7 +68,7 @@ export default function IndexPage() {
                                     <h1>
                                         Hello, {username}
                                     </h1>
-                                        <Link to="/list-books" className="button">YOUR BOOKS</Link>
+                                    <Link to="/list-books" className="button">YOUR BOOKS</Link>
                                 </div>
                             </div>
                         )}

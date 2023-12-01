@@ -12,6 +12,7 @@ import BookDetails from './components/book-details/BookDetails';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
+import OthersListBooks from './components/list-books/OthersListBooks';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path='/' element={<IndexPage />} />
                     <Route path='/create-book' element={<AddBook/>} />
                     <Route path='/list-books' element={<ListBooks />} />
+                    <Route path='/others-books' element={<OthersListBooks />} />
                     <Route path='/book-details/:bookId' element={<BookDetails />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
