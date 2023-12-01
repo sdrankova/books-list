@@ -31,20 +31,20 @@ export default function Navigation() {
                                 <div id="user">
 
                                     <Link
-                                        className={active === 1 ? "active" : ""}
-                                        onClick={() => setActive(1)}
-                                        to="/list-books">YOUR BOOKS</Link>
-                                    <Link
-                                        className={active === 2 ? "active" : ""}
-                                        onClick={() => setActive(2)}
-                                        to="/others-books">OTHER'S BOOKS</Link>
-                                    <Link
                                         className={active === 3 ? "active" : ""}
                                         onClick={() => setActive(3)}
-                                        to="/create-book">ADD BOOK</Link>
+                                        to="/list-books">YOUR BOOKS</Link>
                                     <Link
                                         className={active === 4 ? "active" : ""}
-                                        onClick={() => setActive(3)}
+                                        onClick={() => setActive(4)}
+                                        to="/others-books">OTHER'S BOOKS</Link>
+                                    <Link
+                                        className={active === 5 ? "active" : ""}
+                                        onClick={() => setActive(5)}
+                                        to="/create-book">ADD BOOK</Link>
+                                    <Link
+                                        className={active === 6 ? "active" : ""}
+                                        onClick={() => setActive(6)}
                                         to="/logout">LOGOUT</Link>
                                 </div>
                             )}
