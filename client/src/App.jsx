@@ -7,12 +7,14 @@ import { AuthProvider } from './contexts/AuthContext';
 import Navigation from "./components/navigation/Navigation"
 import IndexPage from "./components/index-page/IndexPage"
 import AddBook from './components/add-book/AddBook';
-import ListBooks from './components/list-books/ListBooks';
+import BooksList from './components/list-books/BooksList';
 import BookDetails from './components/book-details/BookDetails';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
-import OthersListBooks from './components/list-books/OthersListBooks';
+import OthersBooksList from './components/list-books/OthersBooksList';
+import Path from './paths';
+import BookEdit from './components/book-edit/BookEdit';
 
 function App() {
     return (
@@ -22,9 +24,10 @@ function App() {
                 <Routes>
                     <Route path='/' element={<IndexPage />} />
                     <Route path='/create-book' element={<AddBook/>} />
-                    <Route path='/list-books' element={<ListBooks />} />
-                    <Route path='/others-books' element={<OthersListBooks />} />
+                    <Route path='/list-books' element={<BooksList />} />
+                    <Route path='/others-books' element={<OthersBooksList />} />
                     <Route path='/book-details/:bookId' element={<BookDetails />} />
+                    <Route path={Path.BookEdit} element={<BookEdit />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/logout' element={<Logout />} />

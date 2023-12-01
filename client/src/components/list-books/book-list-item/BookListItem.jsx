@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import styles from './ListBookItem.module.css';
+import styles from './BookListItem.module.css';
 
-export default function ListBookItem({
+export default function BookListItem({
     _id,
     title,
     author,
