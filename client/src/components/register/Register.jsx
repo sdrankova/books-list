@@ -127,9 +127,15 @@ export default function Register() {
                     <p className='errorText'>{confirmPasswordError}</p>
                 )}
 
-                <button>
-                    Send
-                </button>
+                {!emailError && !passwordError && !confirmPasswordError ? (
+                    <button>
+                        Send
+                    </button>
+                ) : (
+                    <button disabled>
+                        Send
+                    </button>
+                )}
             </form>
         </div>
     );
