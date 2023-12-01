@@ -48,7 +48,7 @@ export default function BookEdit() {
         <section className="form_section ">
         <div className="container">
             <h2>
-                Add New Book
+                Edit Book
             </h2>
             <div className="row">
                 <div className="col-md-7">

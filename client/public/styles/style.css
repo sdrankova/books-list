@@ -278,7 +278,7 @@ a:focus {
 .header-image {
   width: 40em;
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 
 .best-sellers-list {
@@ -369,10 +369,13 @@ margin .form_section {
 }
 
 .button {
-  padding: 1em;
-  background: #6c5ce7;
+  padding: 0.5em;
+  display: inline-block;
   border-radius: 2em;
+  width: 8em;
+  border: 0;
   color: #fff;
+  background: #6c5ce7;
 }
 
 .button:hover {

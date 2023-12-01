@@ -27,3 +27,5 @@ export const edit = async (bookId, bookData) => {
 
     return result;
 }
+
+export const remove = async (bookId) => request.remove(`${baseUrl}/${bookId}`)

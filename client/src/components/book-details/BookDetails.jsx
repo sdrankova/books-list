@@ -1,13 +1,16 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as bookService from '../../services/bookService';
 import AuthContext from "../../contexts/AuthContext";
 import Path from "../../paths";
 import { pathToUrl } from "../../utils/pathUtils";
+import ConfirmationModal from "../confirmation-modal/ConfirmationModal";
 
 export default function BookDetails() {
+    const navigate = useNavigate();
     const [book, setBook] = useState({});
+    const [showConfirmation, setShowConfirmation] = useState(false);
     const { bookId } = useParams();
 
     const { userId } = useContext(AuthContext);
@@ -16,6 +19,12 @@ export default function BookDetails() {
         bookService.getOne(bookId)
             .then(setBook);
     }, [bookId]);
+
+    const onDeleteButtonClickHandler = async () => {
+        await bookService.remove(bookId);
+
+        navigate(Path.Home)
+    }
 
     return (
         <div className="container">
@@ -33,6 +42,12 @@ export default function BookDetails() {
                     {userId === book._ownerId && (
                         <div className="buttons">
                             <Link to={pathToUrl(Path.BookEdit, { bookId })} className="button">Edit</Link>
+                            <button className="button" onClick={() => setShowConfirmation(true)}>Delete</button>
+
+                            {showConfirmation && (
+                                <ConfirmationModal onConfirm={onDeleteButtonClickHandler} onHide={() => setShowConfirmation(false)} title={book.title} />
+                            )}
+
                         </div>
                     )}
                 </div>
