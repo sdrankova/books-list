@@ -9,11 +9,16 @@ export const getAll = async () => {
 };
 
 export const getOne = async (bookId) => {
-    const result = await request.get(`${baseUrl}/${bookId}`, );
+    const result = await request.get(`${baseUrl}/${bookId}`,);
 
     return result;
 }
 
+export const getFavourites = async (username) => {
+    // http://localhost:3030/data/books?where=createdBy%20LIKE%20%22stefi%22
+    const result = await request.get(`${baseUrl}?where=createdBy%20LIKE%20%22${username}%22`);
+    return result;
+}
 
 export const create = async (bookData) => {
 
