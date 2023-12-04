@@ -1,0 +1,29 @@
+li {
+    list-style-type: none;
+}
+
+.commentForm {
+    width: 70%;
+    padding: 1em;
+    text-align: center;
+}
+
+.commentForm h1 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.comment {
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 12px 100px 0 150px;
+    border-radius: 8px;
+}
+
+.allComments {
+    margin: 8px 0;
+    padding: 12px 18px;
+    font-size: 30px;
+    color: #2b5f86;
+    font-style: italic;
+}

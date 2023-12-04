@@ -20,7 +20,6 @@ export default function AddBook({
 
     const titleInputRef = useRef();
     const [formValues, setFormValues] = useState(formInitialState);
-    const [rangeValue, setRangeValue] = useState(5); // Initial value, change as needed
 
     useEffect(() => {
         titleInputRef.current.focus();
