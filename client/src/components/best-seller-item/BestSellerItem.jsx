@@ -14,6 +14,8 @@ export default function BestSellerItem({
     onToggleFavourite,
 }) {
     const [isStarClicked, setStarClicked] = useState(false);
+    const { isAuthenticated } = useContext(AuthContext);
+
 
     useEffect(() => {
         setStarClicked(isFavourite);
@@ -30,11 +32,13 @@ export default function BestSellerItem({
 
     return (
         <div className={styles.book}>
-            <FontAwesomeIcon
-                icon={faHeart}
-                onClick={handleStarClick}
-                style={{ fontSize: '2em', color: isStarClicked ? 'red' : 'gray' }}
-            />
+            {isAuthenticated && (
+                <FontAwesomeIcon
+                    icon={faHeart}
+                    onClick={handleStarClick}
+                    style={{ fontSize: '2em', color: isStarClicked ? 'red' : 'gray' }}
+                />
+            )}
             <img src={image} alt={title} />
             <section>
                 <h3>{title}</h3>
