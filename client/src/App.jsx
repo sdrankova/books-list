@@ -22,9 +22,9 @@ function App() {
             <>
                 <Navigation />
                 <Routes>
-                    <Route path='/' element={<IndexPage />} />
+                    <Route path={Path.Home} element={<IndexPage />} />
                     <Route path='/create-book' element={<AddBook/>} />
-                    <Route path='/list-books' element={<BooksList />} />
+                    <Route path={Path.BooksList} element={<BooksList />} />
                     <Route path='/others-books' element={<OthersBooksList />} />
                     <Route path='/book-details/:bookId' element={<BookDetails />} />
                     <Route path={Path.BookEdit} element={<BookEdit />} />

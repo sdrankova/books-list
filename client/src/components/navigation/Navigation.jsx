@@ -21,7 +21,6 @@ export default function Navigation() {
                             className="navbar-brand"
                             onClick={() => setActive(0)}
                         >
-                            <img src="images/logo.png" alt="" />
                             <span>
                                 GoodBooks
                             </span>

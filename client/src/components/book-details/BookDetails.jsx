@@ -46,7 +46,7 @@ export default function BookDetails() {
     const onDeleteButtonClickHandler = async () => {
         await bookService.remove(bookId);
 
-        navigate(Path.Home)
+        navigate(Path.BooksList)
     }
 
     return (
