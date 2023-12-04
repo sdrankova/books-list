@@ -379,7 +379,16 @@ margin .form_section {
   background: #6c5ce7;
 }
 
-.button:hover {
+.register {
+  margin: 2em;
+  background: #a29bfe;
+}
+
+.register:hover {
+  background: #6c5ce7;
+}
+
+.login:hover {
   background: #a29bfe;
 
 }
