@@ -1,0 +1,58 @@
+{
+    "8ab539b6-61bf-4a3c-8c63-cf234eb9f731": {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "bookId": "1728274869",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Classic",
+        "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781645176596/the-great-gatsby-and-other-works-9781645176596_hr.jpg",
+        "rating": 4.5,
+        "opinion": "A timeless classic.",
+        "summary": "The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan.",
+        "createdBy": "Peter",
+        "_createdOn": 1701857743808,
+        "_id": "6de31003-4b3a-493c-812f-e2bcdc5692a3"
+    },
+    "2f974e39-7b7d-48e0-8566-6aeff42a1a75": {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "bookId": "1837492847",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Classic",
+        "imageUrl": "https://m.media-amazon.com/images/I/71FxgtFKcQL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.8,
+        "opinion": "A powerful and moving story.",
+        "summary": "A lawyer in the Deep South defends a black man falsely accused of raping a white woman.",
+        "createdBy": "Peter",
+        "_createdOn": 1701857753808,
+        "_id": "8ab539b6-61bf-4a3c-8c63-cf234eb9f731"
+    },
+    "c1f97d42-8f49-4c6c-a5a8-9a54a0c850a1": {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "bookId": "1293485723",
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "genre": "Science Fiction",
+        "imageUrl": "https://m.media-amazon.com/images/I/71oO1E-XPuL._AC_UF894,1000_QL80_.jpg",
+        "rating": 4.7,
+        "opinion": "A science fiction masterpiece.",
+        "summary": "In the distant future, the desert planet Arrakis becomes the center of an interstellar power struggle.",
+        "createdBy": "Peter",
+        "_createdOn": 1701857763808,
+        "_id": "2f974e39-7b7d-48e0-8566-6aeff42a1a75"
+    },
+    "a7bd8c82-3456-4b9c-8fcd-897d8e1094fb": {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "bookId": "1948374652",
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Classic",
+        "imageUrl": "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
+        "rating": 4.9,
+        "opinion": "A timeless love story.",
+        "summary": "The complicated relationship between Elizabeth Bennet and Mr. Darcy in early 19th-century England.",
+        "createdBy": "Peter",
+        "_createdOn": 1701857773808,
+        "_id": "c1f97d42-8f49-4c6c-a5a8-9a54a0c850a1"
+    }
+}
