@@ -51,7 +51,7 @@ export default function BookDetails() {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className={`row ${styles.bookDetailsSection}`}>
                 <img src={book.imageUrl} alt="" />
                 <div className="col-md-6 book-details">
                     <h2>{book.title}</h2>

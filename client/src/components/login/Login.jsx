@@ -15,26 +15,27 @@ export default function Login() {
     });
 
     return (
-        <div className="form_container">
+        <div className="form_container form_section">
+            <h2>Login</h2>
             {loginError && (
                 <p className="errorText">Login failed: {loginError}</p>
             )}
             <form onSubmit={onSubmit}>
+                <label htmlFor="email">Email Address:</label>
                 <input
                     type="email"
                     name={LoginFormKeys.Email}
                     id={LoginFormKeys.Email}
                     onChange={changeHandler}
                     value={formValues[LoginFormKeys.Email]}
-                    placeholder="Email Address"
                 />
+                <label htmlFor="password">Password:</label>
                 <input
                     type="password"
                     name={LoginFormKeys.Password}
                     id={LoginFormKeys.Password}
                     onChange={changeHandler}
                     value={formValues[LoginFormKeys.Password]}
-                    placeholder="Password"
                 />
                 <button>
                     Send

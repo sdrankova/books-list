@@ -192,6 +192,7 @@ a:focus {
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
+  margin-right: 60px;
 }
 
 .detail-box h1,
@@ -215,6 +216,7 @@ a:focus {
   width: 40em;
   position: relative;
   z-index: 1;
+  margin-top: 1em;
 }
 
 .best-sellers-list {
@@ -223,7 +225,17 @@ a:focus {
   justify-content: space-evenly;
 }
 
-margin .form_section {
+.slider_section .detail-box .btn-box {
+  margin-top: 35px;
+}
+
+.slider_section .detail-box .btn-box a {
+  text-align: center;
+  text-transform: uppercase;
+  width: 180px;
+}
+
+.form_section {
   padding-bottom: 90px;
   margin-top: 35px;
 }
@@ -232,6 +244,7 @@ margin .form_section {
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .form_section .form_container {
@@ -254,9 +267,9 @@ margin .form_section {
   border: 2px solid #6c5ce7;
   color: #6c5ce7;
   text-transform: uppercase;
-  padding: 6px 40px;
+  padding: 6px;
   border-radius: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
@@ -310,6 +323,18 @@ margin .form_section {
   border: 0;
   color: #fff;
   background: #6c5ce7;
+}
+
+.your-books {
+    border-radius: 4em;
+    width: 12em;
+    text-align: center;
+    margin: 2em;
+    font-size: 1em;
+}
+
+.books-list {
+  margin-top: 1em;
 }
 
 .login {

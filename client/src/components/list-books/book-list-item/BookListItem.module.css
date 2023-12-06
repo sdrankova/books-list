@@ -10,5 +10,5 @@ img {
     display: flex;
     max-width: 45em;
     gap: 4em;
-    margin: 4em auto;
+    margin: 2em auto 5em auto;
 }
