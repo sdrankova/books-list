@@ -68,7 +68,7 @@ export default function BookDetails() {
                     <p>{book.opinion}</p>
 
                     {userId === book._ownerId && (
-                        <div className="buttons">
+                        <div className={styles.buttons}>
                             <Link to={pathToUrl(Path.BookEdit, { bookId })} className="button">Edit</Link>
                             <button className="button" onClick={() => setShowConfirmation(true)}>Delete</button>
 
@@ -84,17 +84,17 @@ export default function BookDetails() {
                     <h1>Comments</h1>
                     <div className={styles.allComments}>
                         {comments.map(({ _id, text, owner: { username } }) => (
-                            <li key={_id} className="comment">
+                            <li key={_id} className={styles.comment}>
                                 <p>{username}: {text}</p>
                             </li>
                         ))}
                     </div>
 
                     {comments.length === 0 && (
-                        <h3>There are no comments for this book.</h3>
+                        <h5>There are no comments for this book.</h5>
                     )}
 
-                    <h1>Leave a Reply</h1>
+                    <h3>Leave a Reply</h3>
 
                     <form className={styles.create} onSubmit={onSubmit}>
                         <input
@@ -103,8 +103,10 @@ export default function BookDetails() {
                             name="comment"
                             value={formValues.comment}
                             onChange={changeHandler}
+                            className={styles.commentInput}
+                            placeholder="Engage, Discuss, and Share Your Thoughts..."
                         />
-                        <button className="btn btn-primary mt-2" type="submit">Add comment</button>
+                        <button className={styles.addCommentButton} type="submit">Add comment</button>
                     </form>
                 </div>
             </div>

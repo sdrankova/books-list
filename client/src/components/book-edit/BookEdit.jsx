@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import * as BookService from "../../services/bookService";
 
 export default function BookEdit() {
+    const navigate = useNavigate();
     const { bookId } = useParams();
     const [book, setBook] = useState({
         'title': '',
@@ -29,6 +30,7 @@ export default function BookEdit() {
 
         try {
             await BookService.edit(bookId, values);
+            navigate(`/book-details/${bookId}`);
         } catch (err) {
             console.log(err);
         }

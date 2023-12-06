@@ -6,10 +6,21 @@ li {
     margin-top: 3em;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .commentForm {
     width: 70%;
     padding: 1em;
     text-align: center;
+}
+
+.commentInput {
+    border-radius: 13px;
+    border: 0.5px solid;
 }
 
 .commentForm h1 {
@@ -19,10 +30,16 @@ li {
 
 .comment {
     border: 1px solid gray;
-    margin: 8px 0;
-    padding: 12px 100px 0 150px;
-    border-radius: 8px;
+    margin: 0.5em 0 1em 0;
+    padding-top: 0.2em;
+    border-radius: 15px;
+    background: #b2bec3;
 }
+
+li.comment:nth-child(even) {
+    background-color: #dfe6e9;
+}
+
 
 .allComments {
     margin: 8px 0;
@@ -30,4 +47,14 @@ li {
     font-size: 30px;
     color: #2b5f86;
     font-style: italic;
+}
+
+.addCommentButton {
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+    background: #fff;
+    padding: 0.5em;
+    display: inline-block;
+    border-radius: 2em;
+    width: 8em;
 }

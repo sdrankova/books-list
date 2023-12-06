@@ -15,6 +15,7 @@ import Logout from './components/logout/Logout';
 import OthersBooksList from './components/list-books/OthersBooksList';
 import Path from './paths';
 import BookEdit from './components/book-edit/BookEdit';
+import SpecificFavourites from './components/list-books/SelectedUserFavourites';
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path={Path.BooksList} element={<BooksList />} />
                     <Route path='/others-books' element={<OthersBooksList />} />
                     <Route path='/book-details/:bookId' element={<BookDetails />} />
+                    <Route path='/selected-user-books/:username' element={<SpecificFavourites />} />
                     <Route path={Path.BookEdit} element={<BookEdit />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />

@@ -20,7 +20,7 @@ export default function BookListItem({
                 <Link to={`/book-details/${_id}`} className="read-more">Read More</Link>
 
                 {createdBy && (
-                    <p>Created By: {createdBy}</p>
+                    <p>Created By: <Link to={`/selected-user-books/${createdBy}`}>{createdBy}</Link></p>
                 )}
             </div>
         </div>
