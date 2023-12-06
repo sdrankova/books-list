@@ -11,9 +11,18 @@ export default function BestSellersList() {
     const { username } = useContext(AuthContext);
 
     useEffect(() => {
-        getBestSellers()
-            .then(data => setBestSellersList(data))
-            .catch(err => console.log(err));
+        const storedBestSellers = JSON.parse(localStorage.getItem('bestSellersBooks')) || [];
+
+        if (storedBestSellers.length > 0) {
+            setBestSellersList(storedBestSellers);
+        } else {
+            getBestSellers()
+                .then(data => {
+                    setBestSellersList(data);
+                    localStorage.setItem('bestSellersBooks', JSON.stringify(data));
+                })
+                .catch(err => console.log(err));
+        }
     }, []);
 
     useEffect(() => {
