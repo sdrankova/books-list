@@ -2,6 +2,8 @@ import { useRef, useState, useEffect, useContext } from "react";
 import { create } from "../../services/bookService";
 import styles from './AddBook.module.css'
 import AuthContext from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
+import Path from "../../paths";
 
 export default function AddBook({
 }) {
@@ -18,6 +20,7 @@ export default function AddBook({
         createdBy: username,
     }
 
+    const navigate = useNavigate();
     const titleInputRef = useRef();
     const [formValues, setFormValues] = useState(formInitialState);
 
@@ -39,6 +42,7 @@ export default function AddBook({
         try {
             await create(formValues);
             resetFormHandler();
+            navigate(Path.BooksList)
         } catch (err) {
             console.log(err);
         }
@@ -58,92 +62,88 @@ export default function AddBook({
                 <h2>
                     Add New Book
                 </h2>
-                <div className="row">
-                    <div className="col-md-7">
-                        <div className="form_container">
+                <div className="form_container">
 
-                            <form onSubmit={submitHandler} className="create" >
+                    <form onSubmit={submitHandler} className="create" >
 
-                                <label htmlFor="title">Book Title:</label>
-                                <input
-                                    ref={titleInputRef}
-                                    type="text"
-                                    id="title"
-                                    name="title"
-                                    value={formValues.title}
-                                    onChange={changeHandler}
-                                />
+                        <label htmlFor="title">Book Title:</label>
+                        <input
+                            ref={titleInputRef}
+                            type="text"
+                            id="title"
+                            name="title"
+                            value={formValues.title}
+                            onChange={changeHandler}
+                        />
 
-                                <label htmlFor="author">Author:</label>
-                                <input
-                                    type="text"
-                                    id="author"
-                                    name="author"
-                                    value={formValues.author}
-                                    onChange={changeHandler}
-                                />
+                        <label htmlFor="author">Author:</label>
+                        <input
+                            type="text"
+                            id="author"
+                            name="author"
+                            value={formValues.author}
+                            onChange={changeHandler}
+                        />
 
-                                <label htmlFor="genre">Genre:</label>
-                                <input
-                                    type="text"
-                                    id="genre"
-                                    name="genre"
-                                    value={formValues.genre}
-                                    onChange={changeHandler}
-                                />
+                        <label htmlFor="genre">Genre:</label>
+                        <input
+                            type="text"
+                            id="genre"
+                            name="genre"
+                            value={formValues.genre}
+                            onChange={changeHandler}
+                        />
 
-                                <label htmlFor="imageUrl">Image URL:</label>
-                                <input
-                                    type="text"
-                                    id="imageUrl"
-                                    name="imageUrl"
-                                    value={formValues.imageUrl}
-                                    onChange={changeHandler}
-                                />
+                        <label htmlFor="imageUrl">Image URL:</label>
+                        <input
+                            type="text"
+                            id="imageUrl"
+                            name="imageUrl"
+                            value={formValues.imageUrl}
+                            onChange={changeHandler}
+                        />
 
-                                <label htmlFor="rating">Rating:</label>
-                                <select
-                                    className="rating"
-                                    name="rating"
-                                    value={formValues.rating}
-                                    onChange={changeHandler}
-                                >
-                                    <option value="" disabled>Select rating</option>
-                                    <option value="1">1 - Poor</option>
-                                    <option value="2">2 - Fair</option>
-                                    <option value="3">3 - Good</option>
-                                    <option value="4">4 - Very Good</option>
-                                    <option value="5">5 - Excellent</option>
-                                </select>
+                        <label htmlFor="rating">Rating:</label>
+                        <select
+                            className="rating"
+                            name="rating"
+                            value={formValues.rating}
+                            onChange={changeHandler}
+                        >
+                            <option value="" disabled>Select rating</option>
+                            <option value="1">1 - Poor</option>
+                            <option value="2">2 - Fair</option>
+                            <option value="3">3 - Good</option>
+                            <option value="4">4 - Very Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
 
 
-                                <label htmlFor="opinion">Your Opinion:</label>
-                                <textarea
-                                    className="opinion"
-                                    rows="4"
-                                    type="text"
-                                    id="opinion"
-                                    name="opinion"
-                                    value={formValues.opinion}
-                                    onChange={changeHandler}
-                                ></textarea>
+                        <label htmlFor="opinion">Your Opinion:</label>
+                        <textarea
+                            className="opinion"
+                            rows="4"
+                            type="text"
+                            id="opinion"
+                            name="opinion"
+                            value={formValues.opinion}
+                            onChange={changeHandler}
+                        ></textarea>
 
-                                <label htmlFor="opinion">Short Summary:</label>
-                                <textarea
-                                    className="summary"
-                                    rows="4"
-                                    type="text"
-                                    id="summary"
-                                    name="summary"
-                                    value={formValues.summary}
-                                    onChange={changeHandler}
-                                ></textarea>
+                        <label htmlFor="opinion">Short Summary:</label>
+                        <textarea
+                            className="summary"
+                            rows="4"
+                            type="text"
+                            id="summary"
+                            name="summary"
+                            value={formValues.summary}
+                            onChange={changeHandler}
+                        ></textarea>
 
 
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </section>

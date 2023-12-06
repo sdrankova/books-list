@@ -34,29 +34,6 @@ h5 {
   src: url(../fonts/AmericanTypewriterBQ-Bold.otf);
 }
 
-/*header section*/
-.hero_area {
-  height: 80vh;
-  position: relative;
-}
-
-.hero_area_navigation {
-  height: 20vh;
-
-}
-
-/* .hero_area::before {
-  content: "";
-  position: absolute;
-  top: -7.8em;
-  left: 1em;
-  width: 20%;
-  min-width: 150px;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#51b5ef), to(#436bf1));
-  background: linear-gradient(to right, #51b5ef, #436bf1);
-} */
-
 .header_section .container-fluid {
   padding: 0;
 }
@@ -198,7 +175,7 @@ a:focus {
   transform: translateY(-50%);
 }
 
-.slider_section .side_heading h5 {
+.side_heading h5 {
   -webkit-writing-mode: tb-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: tb-rl;
@@ -208,12 +185,16 @@ a:focus {
   font-size: 20px;
 }
 
-.slider_section .detail-box {
+.detail-box {
   margin-top: 65px;
-  position: relative;
+  display: flex;
+  align-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
-.slider_section .detail-box h1,
+.detail-box h1,
 .best-books-wrapper h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -223,62 +204,17 @@ a:focus {
 }
 
 .best-books-wrapper h1 {
+  margin-top: 1em;
+  position: relative;
+  z-index: 1;
   text-align: center;
-  font-size: 2em;
-}
-
-.slider_section .detail-box .btn-box {
-  margin-top: 35px;
-}
-
-.slider_section .detail-box .btn-box a {
-  text-align: center;
-  text-transform: uppercase;
-  width: 180px;
-}
-
-.slider_section .detail-box .btn-box .btn-1 {
-  display: inline-block;
-  padding: 10px 0px;
-  background-color: #51b5ef;
-  color: #ffffff;
-  border: 1px solid #51b5ef;
-  text-transform: uppercase;
-  margin-right: 10px;
-}
-
-.slider_section .detail-box .btn-box .btn-1:hover {
-  background-color: transparent;
-  color: #51b5ef;
-}
-
-.slider_section .detail-box .btn-box .btn-2 {
-  display: inline-block;
-  padding: 10px 0px;
-  background-color: #262626;
-  color: #ffffff;
-  border: 1px solid #262626;
-  text-transform: uppercase;
-}
-
-.slider_section .detail-box .btn-box .btn-2:hover {
-  background-color: transparent;
-  color: #262626;
-}
-
-.slider_section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  font-size: 2.5em;
 }
 
 .header-image {
   width: 40em;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .best-sellers-list {
@@ -295,12 +231,11 @@ margin .form_section {
 .form_section h2 {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .form_section .form_container {
   padding: 0 45px;
-  position: relative;
   left: 13em;
 }
 
@@ -313,14 +248,22 @@ margin .form_section {
   outline: none;
 }
 
-.form_section .form_container button {
+.form_section .form_container button,
+.form_container button {
   background-color: transparent;
-  border: 2px solid #51b5ef;
-  color: #51b5ef;
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
   text-transform: uppercase;
   padding: 6px 40px;
   border-radius: 25px;
-  margin-top: 45px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.form_container button:hover {
+  background: #a29bfe;
+  border-color: #a29bfe;
+  color: white;
 }
 
 .form_container {
@@ -353,16 +296,6 @@ margin .form_section {
   color: rgba(35, 9, 9, 0.6);
 }
 
-.form_container button {
-  background-color: transparent;
-  border: 2px solid #51b5ef;
-  color: #51b5ef;
-  text-transform: uppercase;
-  padding: 6px 40px;
-  border-radius: 25px;
-  margin-top: 45px;
-}
-
 .errorText {
   font-size: 0.7em;
   color: red;
@@ -377,6 +310,12 @@ margin .form_section {
   border: 0;
   color: #fff;
   background: #6c5ce7;
+}
+
+.login {
+  border: 1px solid #6c5ce7;
+  color: #6c5ce7;
+  background: #fff;
 }
 
 .register {

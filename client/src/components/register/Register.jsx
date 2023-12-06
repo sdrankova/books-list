@@ -42,14 +42,15 @@ export default function Register() {
         }
 
         if (formValues[RegisterFormKeys.Password] !== formValues[RegisterFormKeys.ConfirmPassword]) {
-            setconfirmPasswordError('ERROR')
+            setconfirmPasswordError('Passwords do not match. Please make sure your passwords match before proceeding.')
         } else {
             setconfirmPasswordError('');
         }
     };
 
     return (
-        <div className="form_container">
+        <div className="form_container form_section">
+            <h2>Register</h2>
             {registerError && (
                 <p className="errorText">Registration failed: {registerError}</p>
             )}
@@ -62,7 +63,6 @@ export default function Register() {
                     id={RegisterFormKeys.FirstName}
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.FirstName]}
-                    placeholder="First name"
                 />
 
                 <label htmlFor="lastName">Last name:</label>
@@ -72,7 +72,6 @@ export default function Register() {
                     id={RegisterFormKeys.LastName}
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.LastName]}
-                    placeholder="Last name"
                 />
 
                 <label htmlFor="username">Username:</label>
@@ -82,7 +81,6 @@ export default function Register() {
                     id={RegisterFormKeys.Username}
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.Username]}
-                    placeholder="Username"
                 />
 
                 <label htmlFor="email">Email:</label>
@@ -93,7 +91,6 @@ export default function Register() {
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.Email]}
                     onBlur={emailValidator}
-                    placeholder="Email Address"
                 />
                 {emailError && (
                     <p className='errorText'>{emailError}</p>
@@ -107,7 +104,6 @@ export default function Register() {
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.Password]}
                     onBlur={passwordValidator}
-                    placeholder="Password"
                 />
                 {passwordError && (
                     <p className='errorText'>{passwordError}</p>
@@ -121,14 +117,13 @@ export default function Register() {
                     onChange={changeHandler}
                     value={formValues[RegisterFormKeys.ConfirmPassword]}
                     onBlur={passwordValidator}
-                    placeholder="Confirm Password"
                 />
                 {confirmPasswordError && (
                     <p className='errorText'>{confirmPasswordError}</p>
                 )}
 
                 {!emailError && !passwordError && !confirmPasswordError ? (
-                    <button>
+                    <button type="submit">
                         Send
                     </button>
                 ) : (

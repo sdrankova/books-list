@@ -12,58 +12,54 @@ export default function Navigation() {
     const [active, setActive] = useState(0);
 
     return (
-        <div className="hero_area hero_area_navigation">
-            <header className="header_section">
-                <div className="container-fluid">
-                    <nav className="navbar custom_nav-container">
-                        <Link
-                            to="/"
-                            className="navbar-brand"
-                            onClick={() => setActive(0)}
-                        >
-                            <span>
-                                GoodBooks
-                            </span>
-                        </Link>
-                        <div className="navigation-items">
-                            {isAuthenticated && (
-                                <div id="user">
+        <>
+            <nav className="navbar custom_nav-container">
+                <Link
+                    to="/"
+                    className="navbar-brand"
+                    onClick={() => setActive(0)}
+                >
+                    <span>
+                        GoodBooks
+                    </span>
+                </Link>
+                <div className="navigation-items">
+                    {isAuthenticated && (
+                        <div id="user">
 
-                                    <Link
-                                        className={active === 3 ? "active" : ""}
-                                        onClick={() => setActive(3)}
-                                        to="/list-books">YOUR BOOKS</Link>
-                                    <Link
-                                        className={active === 4 ? "active" : ""}
-                                        onClick={() => setActive(4)}
-                                        to="/others-books">OTHER'S BOOKS</Link>
-                                    <Link
-                                        className={active === 5 ? "active" : ""}
-                                        onClick={() => setActive(5)}
-                                        to="/create-book">ADD BOOK</Link>
-                                    <Link
-                                        className={active === 6 ? "active" : ""}
-                                        onClick={() => setActive(6)}
-                                        to="/logout">LOGOUT</Link>
-                                </div>
-                            )}
-                            {!isAuthenticated && (
-                                <div id="guest">
-
-                                    <Link
-                                        className={active === 1 ? "active" : ""}
-                                        onClick={() => setActive(1)}
-                                        to="/login">Log In</Link>
-                                    <Link
-                                        className={active === 2 ? "active" : ""}
-                                        onClick={() => setActive(2)}
-                                        to="/register">Register</Link>
-                                </div>
-                            )}
+                            <Link
+                                className={active === 3 ? "active" : ""}
+                                onClick={() => setActive(3)}
+                                to="/list-books">YOUR BOOKS</Link>
+                            <Link
+                                className={active === 4 ? "active" : ""}
+                                onClick={() => setActive(4)}
+                                to="/others-books">OTHER'S BOOKS</Link>
+                            <Link
+                                className={active === 5 ? "active" : ""}
+                                onClick={() => setActive(5)}
+                                to="/create-book">ADD BOOK</Link>
+                            <Link
+                                className={active === 6 ? "active" : ""}
+                                onClick={() => setActive(6)}
+                                to="/logout">LOGOUT</Link>
                         </div>
-                    </nav>
+                    )}
+                    {!isAuthenticated && (
+                        <div id="guest">
+
+                            <Link
+                                className={active === 1 ? "active" : ""}
+                                onClick={() => setActive(1)}
+                                to="/login">Log In</Link>
+                            <Link
+                                className={active === 2 ? "active" : ""}
+                                onClick={() => setActive(2)}
+                                to="/register">Register</Link>
+                        </div>
+                    )}
                 </div>
-            </header>
-        </div>
+            </nav>
+        </>
     );
 }

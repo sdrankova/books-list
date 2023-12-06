@@ -11,7 +11,7 @@ export default function IndexPage() {
     } = useContext(AuthContext);
 
     return (
-        <div className="hero_area">
+        <>
             <section className=" slider_section position-relative">
                 <div className="side_heading">
                     <h5>
@@ -77,6 +77,6 @@ export default function IndexPage() {
                 </div>
             </section>
             <BestSellersList />
-        </div>
+        </>
     );
 }
