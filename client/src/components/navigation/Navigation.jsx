@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 
 import { Link } from 'react-router-dom';
 import AuthContext from "../../contexts/AuthContext";
+import Path from "../../paths";
 
 
 export default function Navigation() {
@@ -34,25 +35,28 @@ export default function Navigation() {
                             <Link
                                 className={active === 4 ? "active" : ""}
                                 onClick={() => setActive(4)}
-                                to="/others-books">OTHER'S BOOKS</Link>
+                                to={Path.OthersBooks}>OTHER'S BOOKS</Link>
                             <Link
                                 className={active === 5 ? "active" : ""}
                                 onClick={() => setActive(5)}
-                                to="/create-book">ADD BOOK</Link>
+                                to={Path.BookCreate}>ADD BOOK</Link>
                             <Link
-                                to="/logout">LOGOUT</Link>
+                                to={Path.Logout}>LOGOUT</Link>
                         </div>
                     ) : (
                         <div id="guest">
-
+                            <Link
+                                className={active === 4 ? "active" : ""}
+                                onClick={() => setActive(4)}
+                                to={Path.OthersBooks}>OTHER'S BOOKS</Link>
                             <Link
                                 className={active === 1 ? "active" : ""}
                                 onClick={() => setActive(1)}
-                                to="/login">Log In</Link>
+                                to={Path.Login}>Log In</Link>
                             <Link
                                 className={active === 2 ? "active" : ""}
                                 onClick={() => setActive(2)}
-                                to="/register">Register</Link>
+                                to={Path.Register}>Register</Link>
                         </div>
                     )}
                 </div>

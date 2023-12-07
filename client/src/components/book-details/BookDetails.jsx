@@ -17,7 +17,7 @@ export default function BookDetails() {
     const [showConfirmation, setShowConfirmation] = useState(false);
     const { bookId } = useParams();
 
-    const { username, userId } = useContext(AuthContext);
+    const { username, userId, isAuthenticated } = useContext(AuthContext);
 
     useEffect(() => {
         bookService.getOne(bookId)
@@ -93,20 +93,27 @@ export default function BookDetails() {
                         <h5>There are no comments for this book.</h5>
                     )}
 
-                    <h3>Leave a Reply</h3>
+                    {isAuthenticated ? (
+                        <div>
+                            <h3>Leave a Reply</h3>
 
-                    <form className={styles.create} onSubmit={onSubmit}>
-                        <input
-                            type="text"
-                            id="comment"
-                            name="comment"
-                            value={formValues.comment}
-                            onChange={changeHandler}
-                            className={styles.commentInput}
-                            placeholder="Engage, Discuss, and Share Your Thoughts..."
-                        />
-                        <button className={styles.addCommentButton} type="submit">Add comment</button>
-                    </form>
+                            <form className={styles.create} onSubmit={onSubmit}>
+                                <input
+                                    type="text"
+                                    id="comment"
+                                    name="comment"
+                                    value={formValues.comment}
+                                    onChange={changeHandler}
+                                    className={styles.commentInput}
+                                    placeholder="Engage, Discuss, and Share Your Thoughts..."
+                                />
+                                <button className={styles.addCommentButton} type="submit">Add comment</button>
+                            </form>
+                        </div>
+                    ) : (
+                        <h3 className={styles.guestText}>Please <Link to={Path.Login}>LOG IN</Link> or <Link to={Path.Register}>REGISTER</Link> to leave a comment.</h3>
+                    )}
+
                 </div>
             </div>
         </div>
