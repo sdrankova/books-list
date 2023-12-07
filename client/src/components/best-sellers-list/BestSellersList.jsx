@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 
 import { getBestSellers } from "../../services/BestSellersService";
 import BestSellerItem from "../best-seller-item/BestSellerItem";
-import { getAll, getFavourites, create, remove } from "../../services/bookService";
+import { getFavourites, create, remove } from "../../services/bookService";
 import AuthContext from "../../contexts/AuthContext";
 
 export default function BestSellersList() {
@@ -24,6 +24,18 @@ export default function BestSellersList() {
                 .catch(err => console.log(err));
         }
     }, []);
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+          localStorage.removeItem('bestSellersBooks');
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+          window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+      }, []);
 
     useEffect(() => {
         getFavourites(username)
