@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+
+import styles from './IndexPage.module.css'
 import { Link } from 'react-router-dom';
 import BestSellersList from '../best-sellers-list/BestSellersList';
 import AuthContext from '../../contexts/AuthContext';
@@ -30,12 +34,12 @@ export default function IndexPage() {
                     <div className="row">
                         <div className="col-lg-4 col-md-4">
 
-                            <img src="images/undraw_book_lover_mkck.svg" className='header-image' />
+                            <img src="images/undraw_book_lover_mkck.svg" className={styles.headerImage} />
 
                         </div>
-                        {!isAuthenticated && (
-                            <div className=" col-md-5 offset-md-1">
-                                <div className="detail-box">
+                        <div className={`col-md-5 offset-md-1 ${styles.siteDetails}`}>
+                            {!isAuthenticated && (
+                                <div className={styles.detailBox}>
                                     <h1>
                                         Good Books
                                     </h1>
@@ -44,35 +48,41 @@ export default function IndexPage() {
                                         alteration in some form, by injected humour, or randomised words
                                     </p>
 
-                                    <div className="btn-box">
+                                    <div className={styles.btnBox}>
                                         <Link
                                             to='/login'
-                                            className="button login"
+                                            className={`button ${styles.login}`}
                                         >
                                             Log In
                                         </Link>
                                         <Link
                                             to='/register'
-                                            className="button register"
+                                            className={`button ${styles.register}`}
                                         >
                                             Register
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
-                        )}
-
-                        {isAuthenticated && (
-                            <div className=" col-md-5 offset-md-1">
-                                <div className="detail-box">
-                                    <h1>
-                                        Hello, {username}
-                                    </h1>
-                                    <Link to="/list-books" className="button your-books">YOUR BOOKS</Link>
+                            )}
+                            {isAuthenticated && (
+                                <div className=" col-md-5 offset-md-1">
+                                    <div className={styles.detailBox}>
+                                        <h1>
+                                            Hello, {username}
+                                        </h1>
+                                        <Link to="/list-books" className="button your-books">YOUR BOOKS</Link>
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
 
+                            <div className={styles.arrowBox} onClick={() => document.getElementById('list-top10').scrollIntoView({ behavior: 'smooth' })}>
+                                <p className={styles.arrowText}>Discover the bestsellers below.</p>
+                                <FontAwesomeIcon
+                                    icon={faAngleDown}
+                                    className={styles.arrow}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

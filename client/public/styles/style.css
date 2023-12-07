@@ -185,54 +185,20 @@ a:focus {
   font-size: 20px;
 }
 
-.detail-box {
-  margin-top: 65px;
-  display: flex;
-  align-content: space-between;
-  /* justify-content: center; */
-  align-items: center;
-  flex-direction: column;
-  margin-right: 60px;
-}
-
-.detail-box h1,
-.best-books-wrapper h1 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3.5rem;
-  font-family: 'American Typewriter', sans-serif;
-  font-weight: 400;
-}
-
 .best-books-wrapper h1 {
   margin-top: 1em;
   position: relative;
   z-index: 1;
   text-align: center;
   font-size: 2.5em;
-}
-
-.header-image {
-  width: 40em;
-  position: relative;
-  z-index: 1;
-  margin-top: 1em;
+  font-family: 'American Typewriter', sans-serif;
+  font-weight: 400;
 }
 
 .best-sellers-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.slider_section .detail-box .btn-box {
-  margin-top: 35px;
-}
-
-.slider_section .detail-box .btn-box a {
-  text-align: center;
-  text-transform: uppercase;
-  width: 180px;
 }
 
 .form_section {
@@ -335,26 +301,6 @@ a:focus {
 
 .books-list {
   margin-top: 1em;
-}
-
-.login {
-  border: 1px solid #6c5ce7;
-  color: #6c5ce7;
-  background: #fff;
-}
-
-.register {
-  margin: 2em;
-  background: #a29bfe;
-}
-
-.register:hover {
-  background: #6c5ce7;
-}
-
-.login:hover {
-  background: #a29bfe;
-
 }
 
 .row {

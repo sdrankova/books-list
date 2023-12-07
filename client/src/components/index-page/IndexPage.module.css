@@ -1,0 +1,80 @@
+.siteDetails {
+    margin-left: -1em;
+}
+
+.login {
+    border: 1px solid #6c5ce7;
+    color: #6c5ce7;
+    background: transparent;
+}
+
+.register {
+    margin: 2em;
+    background: #a29bfe;
+}
+
+.register:hover {
+    background: #6c5ce7;
+}
+
+.login:hover {
+    background: #a29bfe;
+
+}
+
+
+.detailBox {
+    margin-top: 65px;
+    display: flex;
+    align-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.detailBox h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: 'American Typewriter', sans-serif;
+    font-weight: 400;
+}
+
+.detailBox .btnBox {
+    margin-top: -1em;
+}
+
+.detailBox .btnBox a {
+    text-align: center;
+    text-transform: uppercase;
+    width: 180px;
+}
+
+.headerImage {
+    width: 45em;
+    position: relative;
+    z-index: 0;
+    margin-top: 3em;
+}
+
+.arrowBox {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    left: 8em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 2.5em;
+    color: #b2bec3;
+}
+
+.arrowText {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 0.5em;
+}
