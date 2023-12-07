@@ -24,7 +24,7 @@ export default function Navigation() {
                     </span>
                 </Link>
                 <div className="navigation-items">
-                    {isAuthenticated && (
+                    {isAuthenticated ? (
                         <div id="user">
 
                             <Link
@@ -40,12 +40,9 @@ export default function Navigation() {
                                 onClick={() => setActive(5)}
                                 to="/create-book">ADD BOOK</Link>
                             <Link
-                                className={active === 6 ? "active" : ""}
-                                onClick={() => setActive(6)}
                                 to="/logout">LOGOUT</Link>
                         </div>
-                    )}
-                    {!isAuthenticated && (
+                    ) : (
                         <div id="guest">
 
                             <Link
