@@ -38,7 +38,7 @@ export default function IndexPage() {
 
                         </div>
                         <div className={`col-md-5 offset-md-1 ${styles.siteDetails}`}>
-                            {!isAuthenticated && (
+                            {!isAuthenticated ? (
                                 <div className={styles.detailBox}>
                                     <h1>
                                         Good Books
@@ -63,8 +63,7 @@ export default function IndexPage() {
                                         </Link>
                                     </div>
                                 </div>
-                            )}
-                            {isAuthenticated && (
+                            ) : (
                                 <div className=" col-md-5 offset-md-1">
                                     <div className={styles.detailBox}>
                                         <h1>

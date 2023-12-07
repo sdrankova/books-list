@@ -59,10 +59,9 @@ export default function BookDetails() {
                     <p>Rate: {book.rating}</p>
                     <h4>About the book:</h4>
                     <p>{book.summary}</p>
-                    {userId === book._ownerId && (
+                    {userId === book._ownerId ? (
                         <h4>Your opinion:</h4>
-                    )}
-                    {userId !== book._ownerId && (
+                    ) : (
                         <h4>{book.createdBy}'s opinion:</h4>
                     )}
                     <p>{book.opinion}</p>
