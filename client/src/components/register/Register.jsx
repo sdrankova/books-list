@@ -124,11 +124,11 @@ export default function Register() {
 
                 {!emailError && !passwordError && !confirmPasswordError ? (
                     <button type="submit">
-                        Send
+                        Register
                     </button>
                 ) : (
                     <button disabled>
-                        Send
+                        Register
                     </button>
                 )}
             </form>

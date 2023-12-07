@@ -38,7 +38,7 @@ export default function Login() {
                     value={formValues[LoginFormKeys.Password]}
                 />
                 <button>
-                    Send
+                    Login
                 </button>
             </form>
         </div>
