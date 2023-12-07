@@ -16,7 +16,11 @@ export const getOne = async (bookId) => {
 
 export const getFavourites = async (username) => {
     // http://localhost:3030/data/books?where=createdBy%20LIKE%20%22stefi%22
-    const result = await request.get(`${baseUrl}?where=createdBy%20LIKE%20%22${username}%22`);
+    const query = new URLSearchParams({
+        where: `createdBy="${username}"`,
+    });
+    const result = await request.get(`${baseUrl}?${query}`);
+
     return result;
 }
 
