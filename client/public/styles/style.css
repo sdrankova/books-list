@@ -69,9 +69,6 @@ a.active {
   background: #a29bfe;
   color: #6c5ce7;
   border-radius: 2em;
-  padding: 0.5em 1em;
-  width: 13em;
-  text-align: center;
 }
 
 .navigation-items {
@@ -79,20 +76,17 @@ a.active {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
 }
 
 .navigation-items a {
   display: inline-block;
   list-style: none;
   margin: 0 0.8em;
-}
-
-.navigation-items a {
+  padding: 0.5em 1em;
+  width: 13em;
   text-decoration: none;
   color: #b2bec3;
-  width: 13em;
-  padding: 0.5em 1em;
-
 }
 
 a,
