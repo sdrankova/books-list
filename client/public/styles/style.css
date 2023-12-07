@@ -27,11 +27,18 @@ h5 {
 #root {
   flex-wrap: wrap;
   gap: 4em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @font-face {
   font-family: American Typewriter;
   src: url(../fonts/AmericanTypewriterBQ-Bold.otf);
+}
+
+.main-container {
+  flex: 1;
 }
 
 .header_section .container-fluid {
@@ -64,6 +71,7 @@ a.active {
 .navigation-items {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -94,18 +102,6 @@ a:focus {
   outline: none !important;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-  background-size: 18px;
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-  margin: 0 40px 0 15px;
-  background-position: center;
 }
 
 .navbar-brand {
@@ -201,11 +197,6 @@ a:focus {
   justify-content: space-evenly;
 }
 
-.form_section {
-  padding-bottom: 90px;
-  margin-top: 35px;
-}
-
 .form_section h2 {
   text-align: center;
   font-weight: bold;
@@ -243,11 +234,6 @@ a:focus {
   background: #a29bfe;
   border-color: #a29bfe;
   color: white;
-}
-
-.form_container {
-  padding: 0 45px;
-  margin: auto;
 }
 
 .form_container input {
@@ -309,54 +295,4 @@ a:focus {
 
 .book-details {
   text-align: center;
-}
-
-
-/* footer section*/
-.footer_section {
-  padding: 20px;
-  background-color: #252525;
-}
-
-.footer_section .social_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 25px 0;
-}
-
-.footer_section .social_container h4 {
-  color: #a9a6a6;
-  font-weight: bold;
-}
-
-.footer_section .social_container .social_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer_section .social_container .social_box a {
-  margin: 0 10px;
-}
-
-.footer_section .social_container .social_box a img {
-  max-width: 100%;
-}
-
-.footer_section p {
-  margin: 0;
-  text-align: center;
-  color: #ffffff;
-}
-
-.footer_section a {
-  color: #ffffff;
 }

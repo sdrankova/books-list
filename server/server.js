@@ -1360,7 +1360,7 @@
                 "_id": "6de31003-4b3a-493c-812f-e2bcdc5692a3"
             },
             "2f974e39-7b7d-48e0-8566-6aeff42a1a75": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381be84",
                 "bookId": "1837492847",
                 "title": "To Kill a Mockingbird",
                 "author": "Harper Lee",
@@ -1369,7 +1369,7 @@
                 "rating": 4.8,
                 "opinion": "A powerful and moving story.",
                 "summary": "A lawyer in the Deep South defends a black man falsely accused of raping a white woman.",
-                "createdBy": "Peter",
+                "createdBy": "Stefi",
                 "_createdOn": 1701857753808,
                 "_id": "8ab539b6-61bf-4a3c-8c63-cf234eb9f731"
             },
@@ -1388,7 +1388,7 @@
                 "_id": "2f974e39-7b7d-48e0-8566-6aeff42a1a75"
             },
             "a7bd8c82-3456-4b9c-8fcd-897d8e1094fb": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381be84",
                 "bookId": "1948374652",
                 "title": "Pride and Prejudice",
                 "author": "Jane Austen",
@@ -1397,7 +1397,7 @@
                 "rating": 4.9,
                 "opinion": "A timeless love story.",
                 "summary": "The complicated relationship between Elizabeth Bennet and Mr. Darcy in early 19th-century England.",
-                "createdBy": "Peter",
+                "createdBy": "Stefi",
                 "_createdOn": 1701857773808,
                 "_id": "c1f97d42-8f49-4c6c-a5a8-9a54a0c850a1"
             },

@@ -16,12 +16,14 @@ import OthersBooksList from './components/list-books/OthersBooksList';
 import Path from './paths';
 import BookEdit from './components/book-edit/BookEdit';
 import SpecificFavourites from './components/list-books/SelectedUserFavourites';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
         <AuthProvider>
             <>
                 <Navigation />
+                <div className="main-container">
                 <Routes>
                     <Route path={Path.Home} element={<IndexPage />} />
                     <Route path='/create-book' element={<AddBook/>} />
@@ -34,6 +36,8 @@ function App() {
                     <Route path='/login' element={<Login />} />
                     <Route path='/logout' element={<Logout />} />
                 </Routes>
+                </div>
+                <Footer />
             </>
         </AuthProvider>
     )

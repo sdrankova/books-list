@@ -1,0 +1,72 @@
+.footerSection {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerLogo {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footerLogo span {
+    margin: 0;
+}
+
+.footerMenu {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footerMenu ul {
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footerMenu li {
+    float: left;
+    font-size: 18px;
+    color: #b2bec3;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.footerMenu li a {
+    color: #b2bec3;
+}
+
+.footerMenu li a:hover {
+    color: #ffffff;
+}
+
+.contactMenu {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.contactMenu ul {
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+}
+
+.contactMenu li {
+    float: initial;
+    font-size: 18px;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+}
+
+.contactMenu li a {
+    color: #b3b3b3;
+}
+
+.contactMenu li a:hover {
+    color: #ffffff;
+}
