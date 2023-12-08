@@ -4,11 +4,13 @@ import styles from './AddBook.module.css'
 import AuthContext from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import Path from "../../paths";
-import ActiveButtonContext from "../../contexts/ActiveButton";
+import ActiveButtonContext from "../../contexts/ActiveButtonContext";
 
 export default function AddBook({
 }) {
+    const navigate = useNavigate();
     const { username } = useContext(AuthContext);
+    const [formError, setFormError] = useState('');
     const { setActiveButtonHandler } = useContext(ActiveButtonContext);
 
     const formInitialState = {
@@ -22,7 +24,6 @@ export default function AddBook({
         createdBy: username,
     }
 
-    const navigate = useNavigate();
     const titleInputRef = useRef();
     const [formValues, setFormValues] = useState(formInitialState);
 
@@ -41,6 +42,12 @@ export default function AddBook({
 
     const submitHandler = async (e) => {
         e.preventDefault();
+
+        if (Object.values(formValues).some(value => value.trim() === '')) {
+            setFormError('Please fill out all fields before submitting.');
+            return;
+        };
+
         try {
             await create(formValues);
             resetFormHandler();
@@ -65,7 +72,9 @@ export default function AddBook({
                     Add New Book
                 </h2>
                 <div className="form_container">
-
+                    {formError && (
+                        <p className="errorText">{formError}</p>
+                    )}
                     <form onSubmit={submitHandler} className="create" >
 
                         <label htmlFor="title">Book Title:</label>

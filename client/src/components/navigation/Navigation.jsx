@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 
 import { Link } from 'react-router-dom';
 import AuthContext from "../../contexts/AuthContext";
-import ActiveButtonContext from "../../contexts/ActiveButton";
+import ActiveButtonContext from "../../contexts/ActiveButtonContext";
 import Path from "../../paths";
 
 export default function Navigation() {
@@ -39,7 +39,7 @@ export default function Navigation() {
                                 onClick={() => setActiveButtonHandler(5)}
                                 to={Path.BookCreate}>ADD BOOK</Link>
                             <Link
-                                to={Path.Logout}>LOGOUT</Link>
+                                to={Path.Logout} onClick={() => setActiveButtonHandler(6)}>LOGOUT</Link>
                         </div>
                     ) : (
                         <div id="guest">

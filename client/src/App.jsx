@@ -17,7 +17,7 @@ import Path from './paths';
 import BookEdit from './components/book-edit/BookEdit';
 import SpecificFavourites from './components/list-books/SelectedUserFavourites';
 import Footer from './components/footer/Footer';
-import { ActiveButtonProvider } from './contexts/ActiveButton';
+import { ActiveButtonProvider } from './contexts/ActiveButtonContext';
 
 function App() {
     return (
