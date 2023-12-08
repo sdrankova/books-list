@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
 import AuthContext from "../../contexts/AuthContext";
 import ActiveButtonContext from "../../contexts/ActiveButton";
-
+import Path from "../../paths";
 
 export default function Navigation() {
     const { isAuthenticated } = useContext(AuthContext);
@@ -33,25 +33,28 @@ export default function Navigation() {
                             <Link
                                 className={activeButton === 4 ? "active" : ""}
                                 onClick={() => setActiveButtonHandler(4)}
-                                to="/others-books">OTHER'S BOOKS</Link>
+                                to={Path.OthersBooks}>OTHER'S BOOKS</Link>
                             <Link
                                 className={activeButton === 5 ? "active" : ""}
                                 onClick={() => setActiveButtonHandler(5)}
-                                to="/create-book">ADD BOOK</Link>
+                                to={Path.BookCreate}>ADD BOOK</Link>
                             <Link
-                                to="/logout">LOGOUT</Link>
+                                to={Path.Logout}>LOGOUT</Link>
                         </div>
                     ) : (
                         <div id="guest">
-
+                            <Link
+                                className={active === 4 ? "active" : ""}
+                                onClick={() => setActive(4)}
+                                to={Path.OthersBooks}>OTHER'S BOOKS</Link>
                             <Link
                                 className={activeButton === 1 ? "active" : ""}
                                 onClick={() => setActiveButtonHandler(1)}
-                                to="/login">Log In</Link>
+                                to={Path.Login}>Log In</Link>
                             <Link
                                 className={activeButton === 2 ? "active" : ""}
                                 onClick={() => setActiveButtonHandler(2)}
-                                to="/register">Register</Link>
+                                to={Path.Register}>Register</Link>
                         </div>
                     )}
                 </div>

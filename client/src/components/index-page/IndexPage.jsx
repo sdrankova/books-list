@@ -7,7 +7,7 @@ import BestSellersList from '../best-sellers-list/BestSellersList';
 import AuthContext from '../../contexts/AuthContext';
 import { useContext } from 'react';
 import ActiveButtonContext from '../../contexts/ActiveButton';
-
+import Path from '../../paths';
 
 export default function IndexPage() {
     const {
@@ -52,14 +52,14 @@ export default function IndexPage() {
 
                                     <div className={styles.btnBox}>
                                         <Link
-                                            to='/login'
+                                            to={Path.Login}
                                             onClick={() => setActiveButtonHandler(1)}
                                             className={`button ${styles.login}`}
                                         >
                                             Log In
                                         </Link>
                                         <Link
-                                            to='/register'
+                                            to={Path.Register}
                                             className={`button ${styles.register}`}
                                             onClick={() => setActiveButtonHandler(2)}
                                         >

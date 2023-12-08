@@ -25,7 +25,7 @@ export default function OthersBooksList() {
 
             
         {books.map(book => {
-            if (book._ownerId !== userId.toString() ) {
+            if (!userId || book._ownerId !== userId.toString() ) {
                 return <BookListItem key={book._id} _id={book._id} title={book.title} author={book.author} summary={book.summary} imageUrl={book.imageUrl} createdBy={book.createdBy} />
             }
         }

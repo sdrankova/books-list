@@ -49,6 +49,10 @@ h5 {
   margin: 0 auto;
 }
 
+#guest {
+  margin-left: 4em;
+}
+
 .navigation-items {
   width: 48em;
   height: 60px;
@@ -65,7 +69,6 @@ a.active {
   background: #a29bfe;
   color: #6c5ce7;
   border-radius: 2em;
-  padding: 0.5em 2em;
 }
 
 .navigation-items {
@@ -73,6 +76,7 @@ a.active {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
 }
 
 .navigation-items a {
@@ -277,15 +281,15 @@ a:focus {
 }
 
 .your-books {
-    border-radius: 4em;
-    width: 12em;
-    text-align: center;
-    margin: 2em;
-    font-size: 1em;
+  border-radius: 4em;
+  width: 12em;
+  text-align: center;
+  margin: 2em;
+  font-size: 1em;
 }
 
 .books-list {
-  margin-top: 1em;
+  margin-top: -2em;
 }
 
 .row {

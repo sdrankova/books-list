@@ -58,3 +58,11 @@ li.comment:nth-child(even) {
     border-radius: 2em;
     width: 8em;
 }
+
+.guestText {
+    margin-top: 2em;
+}
+
+.guestText a:hover {
+  color: #a29bfe;
+}
