@@ -44,8 +44,8 @@ export default function Navigation() {
                     ) : (
                         <div id="guest">
                             <Link
-                                className={active === 4 ? "active" : ""}
-                                onClick={() => setActive(4)}
+                                className={activeButton === 4 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(4)}
                                 to={Path.OthersBooks}>OTHER'S BOOKS</Link>
                             <Link
                                 className={activeButton === 1 ? "active" : ""}
