@@ -14,7 +14,9 @@ _**Note**: As of now, the project doesn't have a backend server. Only a limited 
 ## **Features**
 
 Discover Books: Explore a collection of books and find your next read.
+
 Share Your Reads: Share the books you've read.
+
 NYT Bestsellers: Stay informed about the latest New York Times bestsellers.
 
 
@@ -23,7 +25,7 @@ NYT Bestsellers: Stay informed about the latest New York Times bestsellers.
 If you want to run the Good Book Project locally on your machine, follow these steps:
 
 1. Clone the Repository:
-gh repo clone sdrankova/books-list
+git clone https://github.com/sdrankova/books-list.git
 
 2. Navigate to the Client Folder:
 cd books-list/client
