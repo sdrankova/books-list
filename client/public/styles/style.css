@@ -79,11 +79,12 @@ a.active {
   display: inline-block;
   list-style: none;
   margin: 0 20px;
+  text-decoration : none;
+  color: #b2bec3;
 }
 
-.navigation-items a {
-  text-decoration: none;
-  color: #b2bec3;
+.navigation-items a.active {
+  color: initial;
 }
 
 a,

@@ -2,14 +2,12 @@ import { useContext, useState } from "react";
 
 import { Link } from 'react-router-dom';
 import AuthContext from "../../contexts/AuthContext";
+import ActiveButtonContext from "../../contexts/ActiveButton";
 
 
 export default function Navigation() {
-    const {
-        isAuthenticated,
-    } = useContext(AuthContext);
-
-    const [active, setActive] = useState(0);
+    const { isAuthenticated } = useContext(AuthContext);
+    const { activeButton, setActiveButtonHandler } = useContext(ActiveButtonContext);
 
     return (
         <>
@@ -17,27 +15,28 @@ export default function Navigation() {
                 <Link
                     to="/"
                     className="navbar-brand"
-                    onClick={() => setActive(0)}
+                    onClick={() => setActiveButtonHandler(0)}
                 >
                     <span>
                         GoodBooks
                     </span>
                 </Link>
+
                 <div className="navigation-items">
                     {isAuthenticated ? (
                         <div id="user">
 
                             <Link
-                                className={active === 3 ? "active" : ""}
-                                onClick={() => setActive(3)}
+                                className={activeButton === 3 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(3)}
                                 to="/list-books">YOUR BOOKS</Link>
                             <Link
-                                className={active === 4 ? "active" : ""}
-                                onClick={() => setActive(4)}
+                                className={activeButton === 4 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(4)}
                                 to="/others-books">OTHER'S BOOKS</Link>
                             <Link
-                                className={active === 5 ? "active" : ""}
-                                onClick={() => setActive(5)}
+                                className={activeButton === 5 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(5)}
                                 to="/create-book">ADD BOOK</Link>
                             <Link
                                 to="/logout">LOGOUT</Link>
@@ -46,12 +45,12 @@ export default function Navigation() {
                         <div id="guest">
 
                             <Link
-                                className={active === 1 ? "active" : ""}
-                                onClick={() => setActive(1)}
+                                className={activeButton === 1 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(1)}
                                 to="/login">Log In</Link>
                             <Link
-                                className={active === 2 ? "active" : ""}
-                                onClick={() => setActive(2)}
+                                className={activeButton === 2 ? "active" : ""}
+                                onClick={() => setActiveButtonHandler(2)}
                                 to="/register">Register</Link>
                         </div>
                     )}

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import BestSellersList from '../best-sellers-list/BestSellersList';
 import AuthContext from '../../contexts/AuthContext';
 import { useContext } from 'react';
+import ActiveButtonContext from '../../contexts/ActiveButton';
 
 
 export default function IndexPage() {
@@ -13,6 +14,7 @@ export default function IndexPage() {
         isAuthenticated,
         username,
     } = useContext(AuthContext);
+    const { setActiveButtonHandler } = useContext(ActiveButtonContext);
 
     return (
         <div className="hero_area">
@@ -51,6 +53,7 @@ export default function IndexPage() {
                                     <div className={styles.btnBox}>
                                         <Link
                                             to='/login'
+                                            onClick={() => setActiveButtonHandler(1)}
                                             className={`button ${styles.login}`}
                                         >
                                             Log In
@@ -58,6 +61,7 @@ export default function IndexPage() {
                                         <Link
                                             to='/register'
                                             className={`button ${styles.register}`}
+                                            onClick={() => setActiveButtonHandler(2)}
                                         >
                                             Register
                                         </Link>
@@ -69,7 +73,7 @@ export default function IndexPage() {
                                         <h1>
                                             Hello, {username}
                                         </h1>
-                                        <Link to="/list-books" className="button your-books">YOUR BOOKS</Link>
+                                        <Link to="/list-books" className="button your-books" onClick={() => setActiveButtonHandler(3)}>YOUR BOOKS</Link>
                                     </div>
                                 </div>
                             )}
