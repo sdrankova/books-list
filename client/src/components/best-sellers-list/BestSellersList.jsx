@@ -56,7 +56,7 @@ export default function BestSellersList() {
                     'author': selectedBook.author,
                     'genre': '',
                     'imageUrl': selectedBook.book_image,
-                    'rating': selectedBook.rank,
+                    'rating': '',
                     'opinion': '',
                     'summary': selectedBook.description,
                     createdBy: username,

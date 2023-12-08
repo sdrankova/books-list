@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import * as BookService from "../../services/bookService";
+import AuthContext from "../../contexts/AuthContext";
 
 export default function BookEdit() {
     const navigate = useNavigate();
     const { bookId } = useParams();
+    const { username } = useContext(AuthContext);
     const [book, setBook] = useState({
         'title': '',
         'author': '',
@@ -27,6 +29,7 @@ export default function BookEdit() {
         e.preventDefault();
         
         const values = Object.fromEntries(new FormData(e.currentTarget));
+        values.createdBy = username;
 
         try {
             await BookService.edit(bookId, values);
@@ -43,8 +46,6 @@ export default function BookEdit() {
             [e.target.name]: e.target.value,
         }));
     };
-
-
 
     return (
         <section className="form_section ">
