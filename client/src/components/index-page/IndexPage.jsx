@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import BestSellersList from '../best-sellers-list/BestSellersList';
 import AuthContext from '../../contexts/AuthContext';
 import { useContext } from 'react';
-import ActiveButtonContext from '../../contexts/ActiveButton';
+import ActiveButtonContext from '../../contexts/ActiveButtonContext';
 import Path from '../../paths';
 
 export default function IndexPage() {

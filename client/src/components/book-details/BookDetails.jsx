@@ -9,12 +9,14 @@ import Path from "../../paths";
 import { pathToUrl } from "../../utils/pathUtils";
 import ConfirmationModal from "../confirmation-modal/ConfirmationModal";
 import useForm from "../../hooks/UseForm";
+import ActiveButtonContext from "../../contexts/ActiveButtonContext";
 
 export default function BookDetails() {
     const navigate = useNavigate();
     const [book, setBook] = useState({});
     const [comments, setComments] = useState([]);
     const [showConfirmation, setShowConfirmation] = useState(false);
+    const { setActiveButtonHandler } = useContext(ActiveButtonContext);
     const { bookId } = useParams();
 
     const { username, userId, isAuthenticated } = useContext(AuthContext);
@@ -111,7 +113,7 @@ export default function BookDetails() {
                             </form>
                         </div>
                     ) : (
-                        <h3 className={styles.guestText}>Please <Link to={Path.Login}>LOG IN</Link> or <Link to={Path.Register}>REGISTER</Link> to leave a comment.</h3>
+                        <h3 className={styles.guestText}>Please <Link to={Path.Login} onClick={() => setActiveButtonHandler(1)}>LOG IN</Link> or <Link to={Path.Register} onClick={() => setActiveButtonHandler(2)}>REGISTER</Link> to leave a comment.</h3>
                     )}
 
                 </div>
