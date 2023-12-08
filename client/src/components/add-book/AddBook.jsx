@@ -4,10 +4,12 @@ import styles from './AddBook.module.css'
 import AuthContext from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import Path from "../../paths";
+import ActiveButtonContext from "../../contexts/ActiveButton";
 
 export default function AddBook({
 }) {
     const { username } = useContext(AuthContext);
+    const { setActiveButtonHandler } = useContext(ActiveButtonContext);
 
     const formInitialState = {
         'title': '',
@@ -142,7 +144,7 @@ export default function AddBook({
                         ></textarea>
 
 
-                        <button type="submit">Submit</button>
+                        <button type="submit" onClick={() => setActiveButtonHandler(3)}>Submit</button>
                     </form>
                 </div>
             </div>

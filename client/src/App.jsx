@@ -17,27 +17,30 @@ import Path from './paths';
 import BookEdit from './components/book-edit/BookEdit';
 import SpecificFavourites from './components/list-books/SelectedUserFavourites';
 import Footer from './components/footer/Footer';
+import { ActiveButtonProvider } from './contexts/ActiveButton';
 
 function App() {
     return (
         <AuthProvider>
             <>
-                <Navigation />
-                <div className="main-container">
-                <Routes>
-                    <Route path={Path.Home} element={<IndexPage />} />
-                    <Route path={Path.BookCreate} element={<AddBook/>} />
-                    <Route path={Path.BooksList} element={<BooksList />} />
-                    <Route path={Path.OthersBooks} element={<OthersBooksList />} />
-                    <Route path='/book-details/:bookId' element={<BookDetails />} />
-                    <Route path='/selected-user-books/:username' element={<SpecificFavourites />} />
-                    <Route path={Path.BookEdit} element={<BookEdit />} />
-                    <Route path={Path.Register} element={<Register />} />
-                    <Route path={Path.Login} element={<Login />} />
-                    <Route path={Path.Logout} element={<Logout />} />
-                </Routes>
-                </div>
-                <Footer />
+                <ActiveButtonProvider>
+                    <Navigation />
+                    <div className="main-container">
+                        <Routes>
+                            <Route path={Path.Home} element={<IndexPage />} />
+                            <Route path='/create-book' element={<AddBook />} />
+                            <Route path={Path.BooksList} element={<BooksList />} />
+                            <Route path='/others-books' element={<OthersBooksList />} />
+                            <Route path='/book-details/:bookId' element={<BookDetails />} />
+                            <Route path='/selected-user-books/:username' element={<SpecificFavourites />} />
+                            <Route path={Path.BookEdit} element={<BookEdit />} />
+                            <Route path='/register' element={<Register />} />
+                            <Route path='/login' element={<Login />} />
+                            <Route path='/logout' element={<Logout />} />
+                        </Routes>
+                    </div>
+                    <Footer />
+                </ActiveButtonProvider>
             </>
         </AuthProvider>
     )
