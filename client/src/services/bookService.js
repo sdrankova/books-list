@@ -19,7 +19,7 @@ export const getFavourites = async (username) => {
     const query = new URLSearchParams({
         where: `createdBy="${username}"`,
     });
-    const result = await request.get(`${baseUrl}?${query}`);
+    const result = await request.get(`${baseUrl}?${query}&sortBy=_createdOn desc`);
 
     return result;
 }
